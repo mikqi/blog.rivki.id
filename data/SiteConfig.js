@@ -4,8 +4,7 @@ module.exports = {
   blogAuthorId: "mikqi", // The default and fallback author ID used for blog posts without a defined author.
   siteTitle: "Muhammad Rivki Blog", // Site title.
   siteTitleAlt: "Front-End Engineer", // Alternative site title for SEO.
-  siteLogo:
-    "https://blog.rivki.id/images/avatar.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
+  siteLogo: "/logos/avatar.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "https://blog.rivki.id", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription: "Front-End Engineer", // Website description used for RSS feeds/meta description tag.
