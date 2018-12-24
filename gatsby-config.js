@@ -20,6 +20,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`${__dirname}/src/components/layout.jsx`),
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",

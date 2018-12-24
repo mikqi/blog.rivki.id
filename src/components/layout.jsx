@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Transition from "./Transition"
 import config from "../../data/SiteConfig";
 import "./layout.css";
 
@@ -41,14 +42,16 @@ export default class MainLayout extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, location } = this.props;
     return (
       <div>
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        {children}
+        <Transition location={location}>
+          {children}
+        </Transition>
       </div>
     );
   }
