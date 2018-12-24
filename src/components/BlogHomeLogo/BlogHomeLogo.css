@@ -2,8 +2,6 @@
 .blog-home-logo {
     display: flex;
     justify-content: center;
-
-    /* float: left; */
     background: none !important; /* Makes sure there is never a background */
     border: none !important; /* Makes sure there is never a border */
 }
@@ -35,9 +33,5 @@
 @media only screen and (max-width: 500px) {
     .blog-home-logo {
         padding: 5px;
-    }
-
-    .blog-home-logo img {
-        height: 30px;
     }
 }
