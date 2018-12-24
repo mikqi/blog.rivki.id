@@ -1,10 +1,13 @@
+/* eslint-disable global-require */
 import React from 'react'
-import Velocity from 'velocity-animate'
 import './Nav.css'
+
+let Velocity
 
 export default class Nav extends React.Component {
   componentDidMount() {
     if (window) {
+      Velocity = require('velocity-animate')
       require('./utils')
       const navLinks = document.querySelectorAll('.js-nav-link')
       const navTrigger = document.querySelector('.js-nav-trigger')
