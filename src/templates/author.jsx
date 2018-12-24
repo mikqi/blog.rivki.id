@@ -4,12 +4,11 @@ import Helmet from "react-helmet";
 import PostListing from "../components/PostListing/PostListing";
 import config from "../../data/SiteConfig";
 import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Navigation/Navigation";
+import Navigation from "../components/Nav/Nav";
 import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
-import MenuButton from "../components/MenuButton/MenuButton";
 import AuthorImage from "../components/AuthorImage/AuthorImage";
 import AuthorProfile from "../components/AuthorProfile/AuthorProfile";
 import AuthorName from "../components/AuthorName/AuthorName";
@@ -67,17 +66,11 @@ class AuthorTemplate extends React.Component {
         <Drawer className="author-template" isOpen={this.state.menuOpen}>
           <Helmet title={`Posts by "${author}" | ${config.siteTitle}`} />
 
-          {/* The blog navigation links */}
-          <Navigation config={config} onClose={this.handleOnClose} />
-
           <SiteWrapper>
             <MainHeader className="author-head" cover={cover}>
               <MainNav>
                 <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
-                <MenuButton
-                  navigation={config.siteNavigation}
-                  onClick={this.handleOnClick}
-                />
+                {config.siteNavigation ? <Navigation /> : '' }
               </MainNav>
             </MainHeader>
 

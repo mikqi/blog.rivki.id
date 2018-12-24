@@ -6,9 +6,8 @@ import config from "../../data/SiteConfig";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
-import MenuButton from "../components/MenuButton/MenuButton";
 import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Navigation/Navigation";
+import Navigation from "../components/Nav/Nav";
 import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
 import MainContent from "../components/MainContent/MainContent";
 import PostHeader from "../components/PostHeader/PostHeader";
@@ -94,17 +93,12 @@ class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
 
-          {/* The blog navigation links */}
-          <Navigation config={config} onClose={this.handleOnClose} />
 
           <SiteWrapper>
             <MainHeader className="post-head" cover={cover}>
               <MainNav>
                 <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
-                <MenuButton
-                  navigation={config.siteNavigation}
-                  onClick={this.handleOnClick}
-                />
+                {config.siteNavigation ? <Navigation /> : '' }
               </MainNav>
             </MainHeader>
             <MainContent>

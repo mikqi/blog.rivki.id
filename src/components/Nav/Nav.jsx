@@ -126,10 +126,10 @@ export default class Nav extends React.Component {
       <div>
         <nav>
           <ul className="c-primary-nav">
-            <li><a className="js-nav-link" href="/">Home</a></li>
-            <li><a className="js-nav-link" href="about">About page</a></li>
+            <li><a className="js-nav-link" href="https://this.rivki.id/">Home</a></li>
+            <li><a className="js-nav-link" href="https://this.rivki.id/about">About page</a></li>
             {/* <li><a className="js-nav-link" href="portfolio">Portfolio</a></li> */}
-            <li><a className="js-nav-link" href="https://blog.rivki.id/">Blog</a></li>
+            <li><a className="js-nav-link" href="/">Blog</a></li>
           </ul>
         </nav>
     

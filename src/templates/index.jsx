@@ -6,14 +6,11 @@ import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Navigation/Navigation";
-import Nav from "../components/Nav/Nav"
+import Navigation from "../components/Nav/Nav"
 import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
 import Footer from "../components/Footer/Footer";
 import MainHeader from "../components/MainHeader/MainHeader";
-import MainNav from "../components/MainNav/MainNav";
 import BlogHomeLogo from "../components/BlogHomeLogo/BlogHomeLogo";
-import MenuButton from "../components/MenuButton/MenuButton";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
@@ -64,23 +61,14 @@ class IndexTemplate extends React.Component {
           <Helmet title={config.siteTitle} />
           <SEO postEdges={nodes} />
 
-          {/* The blog navigation links */}
-          <Navigation config={config} onClose={this.handleOnClose} />
-
           <SiteWrapper>
             {/* All the main content gets inserted here */}
             <div className="home-template">
               {/* The big featured header */}
               <MainHeader cover={config.siteCover}>
-                <MainNav overlay={config.siteCover}>
-                  <MenuButton
-                    navigation={config.siteNavigation}
-                    onClick={this.handleOnClick}
-                  />
-                </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
-                    <Nav />
+                    {config.siteNavigation ? <Navigation /> : '' }
                     <BlogHomeLogo logo={config.siteLogo} style={{float: 'none'}} title={config.siteTitle} />
 
                     <PageTitle text={config.siteTitle} />

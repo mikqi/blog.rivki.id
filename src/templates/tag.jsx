@@ -4,12 +4,11 @@ import Helmet from "react-helmet";
 import PostListing from "../components/PostListing/PostListing";
 import config from "../../data/SiteConfig";
 import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Navigation/Navigation";
+import Navigation from "../components/Nav/Nav";
 import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
 import BlogLogo from "../components/BlogLogo/BlogLogo";
-import MenuButton from "../components/MenuButton/MenuButton";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
 import Footer from "../components/Footer/Footer";
@@ -60,8 +59,6 @@ class TagTemplate extends React.Component {
         <Drawer isOpen={this.state.menuOpen}>
           <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
 
-          {/* The blog navigation links */}
-          <Navigation config={config} onClose={this.handleOnClose} />
           <SiteWrapper>
             {/* All the main content gets inserted here */}
             <div className="tag-template">
@@ -69,10 +66,7 @@ class TagTemplate extends React.Component {
               <MainHeader className="tag-head" cover={tag.featureImage}>
                 <MainNav>
                   <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
-                  <MenuButton
-                    navigation={config.siteNavigation}
-                    onClick={this.handleOnClick}
-                  />
+                  {config.siteNavigation ? <Navigation /> : '' }
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
