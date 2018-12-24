@@ -1,11 +1,11 @@
 const path = require("path");
 const _ = require("lodash");
 const fs = require("fs");
-const siteConfig = require("./data/SiteConfig");
 const {
   createPaginationPages,
   createLinkedPages
 } = require("gatsby-pagination");
+const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -49,6 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
         path.resolve(`content/${siteConfig.blogAuthorDir}/authors/`)
       )
     ) {
+      // eslint-disable-next-line prefer-promise-reject-errors
       reject(
         "The 'authors' folder is missing within the 'blogAuthorDir' folder."
       );

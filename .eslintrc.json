@@ -12,6 +12,8 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["react", "jsx-a11y", "import"],
   "rules": {
+    "react/destructuring-assignment": "off",
+    "react/button-has-type": "off",
     "react/prefer-stateless-function": "off",
     "react/prop-types": "off",
     "react/no-danger": "off"

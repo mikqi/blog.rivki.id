@@ -11,6 +11,7 @@ class SEO extends Component {
     let postURL;
     if (postSEO) {
       const postMeta = postNode.frontmatter;
+      // eslint-disable-next-line prefer-destructuring
       title = postMeta.title;
       description = postMeta.description
         ? postMeta.description

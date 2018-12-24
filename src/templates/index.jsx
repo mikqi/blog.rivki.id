@@ -11,12 +11,11 @@ import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
 import Footer from "../components/Footer/Footer";
 import MainHeader from "../components/MainHeader/MainHeader";
 import MainNav from "../components/MainNav/MainNav";
-import BlogLogo from "../components/BlogLogo/BlogLogo";
+import BlogHomeLogo from "../components/BlogHomeLogo/BlogHomeLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
-import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 import Layout from "../components/layout";
 
 class IndexTemplate extends React.Component {
@@ -73,7 +72,6 @@ class IndexTemplate extends React.Component {
               {/* The big featured header */}
               <MainHeader cover={config.siteCover}>
                 <MainNav overlay={config.siteCover}>
-                  <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
                   <MenuButton
                     navigation={config.siteNavigation}
                     onClick={this.handleOnClick}
@@ -81,12 +79,10 @@ class IndexTemplate extends React.Component {
                 </MainNav>
                 <div className="vertical">
                   <div className="main-header-content inner">
+                    <BlogHomeLogo logo={config.siteLogo} style={{float: 'none'}} title={config.siteTitle} />
+
                     <PageTitle text={config.siteTitle} />
                     <PageDescription text={config.siteDescription} />
-                    <SocialMediaIcons
-                      urls={config.siteSocialUrls}
-                      color="currentColor"
-                    />
                   </div>
                 </div>
                 <Link
