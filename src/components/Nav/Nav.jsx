@@ -10,9 +10,6 @@ export default class Nav extends React.Component {
       const navTrigger = document.querySelector('.js-nav-trigger')
       const overlayNav = document.querySelector('.c-overlay-nav')
       const overlayContent = document.querySelector('.c-overlay-content')
-      
-      console.log('mamam')
-      console.log(overlayNav)
 
       // eslint-disable-next-line no-inner-declarations
       function layerInit () {
@@ -63,15 +60,7 @@ export default class Nav extends React.Component {
   }
   
   // eslint-disable-next-line class-methods-use-this
-  oneTimeEvent(element, eventType, callback) {
-    element.addEventListener(eventType, function(e) {
-      e.target.removeEventListener(e.type, arguments.callee);
-      return callback(e);
-    });
-  }
-
-  // eslint-disable-next-line class-methods-use-this
-  handleClick() {
+  handleClick = () => {
     const overlayNav = document.querySelector('.c-overlay-nav')
     const overlayContent = document.querySelector('.c-overlay-content')
     const navigation = document.querySelector('.c-primary-nav')
@@ -105,17 +94,21 @@ export default class Nav extends React.Component {
           scaleY: 0
         }, 0)
 
-        overlayContent.addClass('is-hidden').addEventListener('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => {
-          Velocity(overlayContent.querySelector('span'), {
-            translateZ: 0,
-            scaleX: 0,
-            scaleY: 0
-          }, 0, () => {
-            overlayContent.removeClass('is-hidden')
+        const events = ['transitionend', 'webkitTransitionEnd', 'otransitionend', 'oTransitionEnd', 'msTransitionEnd']
+        overlayContent.addClass('is-hidden')
+        events.forEach(e => {
+          overlayContent.addEventListener(e, () => {
+            Velocity(overlayContent.querySelector('span'), {
+              translateZ: 0,
+              scaleX: 0,
+              scaleY: 0
+            }, 0, () => {
+              overlayContent.removeClass('is-hidden')
+            })
           })
-        }, { once: true })
+        })
 
-        if (document.queryS('html').hasClass('no-csstransitions')) {
+        if (document.querySelector('html').hasClass('no-csstransitions')) {
           Velocity(overlayContent.querySelector('span'), {
             translateZ: 0,
             scaleX: 0,
