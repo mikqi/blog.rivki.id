@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 *,
 *::after,
 *::before {
@@ -20,6 +22,15 @@ body {
 .c-nav-trigger {
   position: fixed;
   display: inline-block;
+}
+
+.js-nav-link {
+  font-family: 'Poppins', 'open-sans';
+  color: #ffffff;
+}
+
+.js-nav-link:hover {
+  color: #2199e8;
 }
 
 .c-logo {
