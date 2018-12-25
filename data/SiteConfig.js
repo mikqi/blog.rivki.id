@@ -7,7 +7,7 @@ module.exports = {
   siteLogo: "/logos/avatar.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "https://blog.rivki.id", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
-  siteDescription: "Front-End Engineer", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Muhammad Rivki, a Frontend Engineer from Jakarta, Indonesia. who loves simplicity, create great looking web products and performance first.", // Website description used for RSS feeds/meta description tag.
   // siteCover: "", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteRss: "/rss.xml", // Path to the RSS file.
@@ -46,7 +46,7 @@ module.exports = {
     // year: "2018" // optional, set specific copyright year or range of years, defaults to current year
     url: "https://this.rivki.id/" // optional, set link address of copyright, defaults to site root
   },
-  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
+  themeColor: "#2199e8", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
   promoteGatsby: true // Enables the GatsbyJS promotion information in footer.
 };

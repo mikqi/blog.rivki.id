@@ -47,7 +47,11 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 710
+              maxWidth: 710,
+              quality: 80,
+              withWebp: true,
+              sizeByPixelDensity: true,
+              showCaptions: true,
             }
           },
           {
@@ -106,7 +110,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "GatsbyJS Casper Starter";
+          ret.generator = "Muhammad Rivki Blog";
           return ret;
         },
         query: `

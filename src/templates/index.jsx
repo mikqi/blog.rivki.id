@@ -72,7 +72,7 @@ class IndexTemplate extends React.Component {
                     <BlogHomeLogo logo={config.siteLogo} style={{float: 'none'}} title={config.siteTitle} />
 
                     <PageTitle text={config.siteTitle} />
-                    <PageDescription text={config.siteDescription} />
+                    <PageDescription text={config.siteTitleAlt} />
                   </div>
                 </div>
                 <Link
