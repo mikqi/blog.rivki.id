@@ -108,6 +108,10 @@ class PostTemplate extends React.Component {
                   <section className="post-meta">
                     <PostDate date={date} />
                     <PostTags prefix=" on " tags={tags} />
+                    <span style={{paddingLeft: 6, paddingRight: 6, fontSize: 13}}>•</span>
+                    <span style={{fontSize: 13}}>
+                      {`${postNode.timeToRead } min read`}
+                    </span>
                   </section>
                 </PostHeader>
 

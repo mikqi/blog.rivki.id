@@ -34,7 +34,7 @@ class PostListing extends React.Component {
       <div>
         {/* This is the post loop - each post will be output using this markup */}
         {postList.map(post => {
-          const { title, path, excerpt, author, tags, date } = post;
+          const { title, path, excerpt, author, tags, date, timeToRead } = post;
           const className = post.post_class ? post.post_class : "post";
 
           return (
@@ -58,7 +58,12 @@ class PostListing extends React.Component {
                 <AuthorThumbnail avatar={author.image} name={author.name} />
                 <AuthorLink url={`/author/${author.uid}`} name={author.name} />
                 <PostTags prefix=" on " tags={tags} />
+                <span style={{paddingLeft: 6, paddingRight: 6, fontSize: 13}}>•</span>
                 <PostDate date={date} />
+                <span style={{paddingLeft: 6, paddingRight: 6, fontSize: 13}}>•</span>
+                <span style={{fontSize: 13}}>
+                  {`${timeToRead } min read`}
+                </span>
               </footer>
             </PostFormatting>
           );
