@@ -151,3 +151,12 @@ div.page-template .post-title {
         margin-top: 1rem;
     }
 }
+
+img[src$='#forty-percent'] {
+    position: inherit;
+    width: 40%;
+}
+
+.u-align-center {
+    text-align: center;
+}
