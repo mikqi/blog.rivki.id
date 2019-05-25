@@ -8,40 +8,49 @@ tags:
     - blog
 ---
 
-This is my first post on my personal blog and this is my blog in different stack. I hope this is my last blogging platform and i stick to this platform.
+Ini adalah post pertama saya di blog personal saya dan di blog ini saya menggunakan teknologi atau stak yang lain lagi. Sebelumnya saya membuat blog di domain ini menggunakan [**Hexo**](https://hexo.io/) namun sekarang saya mencoba untuk mengganti menggunakan teknologi yang lain. Semoga yang stack teknologi yang saya gunakan cocok dengan saya.
 
-![Joker](https://i.giphy.com/xT9GEN48ygdJFm2Yh2.gif)
+Kali ini saya akan memperkenalkan *stack* apa yang saya gunakan dalam pembuatan *blog* saya dan main website saya. Oke kita mulai saja ya dari blog saya dulu.
 
-## Why?
+## History
 
-Why i always change with another stack?
+Kenapa sih saya selalu berganti-ganti *stack* di blog saya? Ya mungkin belum cocok aja kali ya sama yang sebelum-sebelumnya makannya ganti ke yang baru. Saya jelasin satu persatu sejarah *stack* yang pernah saya gunakan.
 
--   My first stack is just **React.js** use REST for get all blog post from my backend and after that i move. Why? Because i was struggle with workflow i made and bad UX when i need a new post. 
--   The next one is [**Hubpress**](https://github.com/HubPress/hubpress.io). I love this platfrom so much, an easy way jekyll blog in github pages with some admin pages and why i move again? The Maintainer is not maintenance it anymore. 
--   So i move to [**Hexo**](https://hexo.io/). It is easy to understand and easy to customize the template but i move again because when i move to another page it load new asset again so it needs so many cost if you're in slow internet connection.
--   And finally i move to [**Gatsby**](https://www.gatsbyjs.org/). First impression with this stack is **amazing** so fast and the developer experience is so good. Maybe i'll stick to this so lets try.
+![Express + React](https://cdn-images-1.medium.com/max/1200/1*j8DELPVuI_w8045sxmHQsA.png)
+*Express + React Stack*
 
-## Intorduction
+### Express + React
 
-In this post, i will give you know about this site stack. From _this.rivki.id_ and _blog.rivki.id_.
+Pertama kali saya mencoba untuk membuat blog pribadi pada tahun 2015 akhir menggunakan *stack* [**React.js**](https://reactjs.org) untuk *client side* dan [**Express.js**](https://expressjs.com/) untuk *backend*-nya. Saya menggunakan [REST](https://www.codecademy.com/articles/what-is-rest) untuk pengolahan datanya. *Backend*-nya cukup simple, hanya untuk mengolah data blog saja seperti mengambil list blog, menambahkan artikel, menghapus dll.
 
-#### this.rivki.id
+Karena butuh effort dan tidak fokus terlalu banyak experiment dan banyak untuk *maintenance*-nya jadi Saya pindah dan membuat/menggunakan platform baru.
 
--   [Nuxt](https://nuxtjs.org)
--   [Velocity-Animation](http://velocityjs.org)
--   [Skeleton](http://getskeleton.com/)
--   [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) - 💙
+![Hubpress](https://avatars0.githubusercontent.com/u/9373039?s=200&v=4#forty-percent)
+*Hubpress Logo*
 
-So why i use **Nuxt** for my personal site? The answer is simple. Because i already familiar with that. Thats it. **Velocity Animation** is use for creating animation when you click Hamburger menu. And last i use **Skeleton** for grid and add some extra flexbox for layouting.
+### Hubpress
 
-#### blog.rivki.id
+Setelah mencoba membuat blog platform sendiri dan merpotkan juga bagi saya untuk me-*maintenance*-nya jadi Saya mencoba untuk pindah ke platform yang sudah jadi dan lengkap. Saat itu yang sedang hype adalah [Hubpress.io](https://github.com/HubPress/hubpress.io). Menggunakannya juga sangat mudah, hanya tinggal *fork repository*-nya terus ikuti konfigurasi yang sudah dijelaskan dari **Hubpress**.
+Ketika saya bukalagi *blog* **Hubpress** yang saya host di **GitHub** ternyata masih ada [disini](https://mikqi.github.io/blog).
 
--   [Gatsby](https://www.gatsbyjs.org/)
--   [Velocity-Animation](http://velocityjs.org)
+Menurut saya cara instalassi dan konfigurasi oleh *Hubpress* tidaklah sulit namun untuk meng-*custom*-nya cukup merepotkan. Mungkin karena *knowledge* saya dulu yang masih sedikit jadi saya memutuskan untuk mencoba hal yang lain lagi.
 
-I already answer why i use **Gatsby** in [here](#why) and in the explaination in domain _this.rivki.id_
+![Hexo](https://pbs.twimg.com/profile_images/476729162707644418/mQZOTo9f.png#forty-percent)
+*Hexo Logo*
 
-if you want to know more about my stack, you can follow that link for more information.
-And this site is hosted in Firebase Hosting. You can read deatil about how to deploy your static site in [here](https://firebase.google.com/docs/hosting/deploying) 😬
+### Hexo
 
-In this site i will tell my story about all i know, about what i learn, and maybe about my daily life. See you next post.
+Selanjutnya saya mencoba [Hexo.io](https://hexo.io/), framework yang fokus untuk membuat blog menggunakan stack node.js dkk. Hexo tergolong mudah dipelajari dan sesuai kebutuhan saya yang sedang belajar node.js pada waktu itu. 
+
+![Gatsby](https://www.gatsbyjs.org/static/gatsby-icon-4a9773549091c227cd2eb82ccd9c5e3a.png#forty-percent)
+*Gatsby Logo*
+
+### Gatsby
+
+Dan terakhir saya mencoba menggunakan [Gatsby](https://gatsbyjs.org) dan yang saya rasakan pertama kali adalah cepat dan developer experience yang bagus. Dari segi dokumentasi sudah lengkap dan bagi yang sudah terbiasa dengan React, atau library yang berbasis component cukup mudah untuk beradaptasi.
+
+Gatsby juga menggunakan [GraphQL](https://graphql.org), jadi yang ingin belajar teknologi yang modern dapat mencoba menggunakan Gatsby. Support komunitasnya juga sudah banyak dan plugin-nya juga sudah lengkap. Jika ingin mempelajarinya silakan baca dokumentasinya.
+
+---
+
+Untuk yang bertanya-tanya blog saya di hosting dimana. Saya menggunakan hosting Firebase yang free. Kalian dapat baca dokumentasi lengkapnya [disni jika kalian ingin mencoba melakukan deploy website statis kalian di Firebase](https://firebase.google.com/docs/hosting/deploying)
