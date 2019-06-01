@@ -114,7 +114,7 @@ Ini menandakan bahwa *code* yang kita buat tidak sesuai dengan aturan yang sudah
 Tambahkan juga script di file `package.json` seperti script di bawah ini.
 
 ```json
-/* package.json
+/* package.json */
 {
 	// ...
 	"scripts": {
