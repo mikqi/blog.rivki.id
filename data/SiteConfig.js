@@ -46,7 +46,7 @@ module.exports = {
     // year: "2018" // optional, set specific copyright year or range of years, defaults to current year
     url: "https://this.rivki.id/" // optional, set link address of copyright, defaults to site root
   },
-  themeColor: "#2199e8", // Used for setting manifest and progress theme colors.
+  themeColor: "#fee994", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
   promoteGatsby: true // Enables the GatsbyJS promotion information in footer.
 };

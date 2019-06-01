@@ -30,7 +30,7 @@ body {
 }
 
 .js-nav-link:hover {
-  color: #2199e8;
+  color: #fee994;
 }
 
 .c-logo {
@@ -150,7 +150,7 @@ body {
 }
 
 .c-nav-trigger::after {
-  background-color: #2199e8;
+  background-color: #fee994;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -350,5 +350,5 @@ body {
 }
 
 .c-overlay-content span {
-  background-color: #2199e8;
+  background-color: #fee994;
 }
