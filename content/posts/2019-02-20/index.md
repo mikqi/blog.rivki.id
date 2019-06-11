@@ -5,7 +5,7 @@ author: "mikqi"
 date: "2019-02-20"
 category: "tutorial"
 tags:
-    - blog
+    - news
     - tutorial
 ---
 
