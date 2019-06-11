@@ -3,9 +3,8 @@ title: "Kegunaan dan Seberapa Penting Sih .lock File"
 cover: "https://images.unsplash.com/photo-1531417666976-ed2bdbeb043b"
 author: "mikqi"
 date: "2019-06-10"
-category: "news"
+category: "javascript"
 tags:
-    - news
     - javascript
 ---
 
