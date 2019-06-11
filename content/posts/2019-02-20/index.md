@@ -5,8 +5,8 @@ author: "mikqi"
 date: "2019-02-20"
 category: "tutorial"
 tags:
-    - blog
     - tutorial
+    - javascript
 ---
 
 Lint atau linter adalah alat untuk menganalisa source code untuk menandai errors, bug, code convention dan memverifikasi kualitas kode. Seberapa penting sih linter dengan projek yang kita buat? Jawabannya menurut saya itu penting. Dengan adanya linter kita dipaksa untuk belajar dan disiplin untuk menulis kode yang bagus dan rapi tapi tetap tidak bugfree dan untuk projek skala besar linter sangat dianjurkan agar semua yang ikut berkontribusi menggunakan code convention yang sama dan tidak berbeda-beda. Disini akan berfokus pada 2 jenis linter, yaitu linter khusus JavaScript dan CSS.

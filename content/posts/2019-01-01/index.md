@@ -3,9 +3,9 @@ title: "Upgraded from Hexo to Gatsby v2"
 cover: "/images/posts/baby-finish.jpg"
 author: "mikqi"
 date: "2019-01-01"
-category: "Info"
+category: "news"
 tags:
-    - blog
+    - news
 ---
 
 Ini adalah post pertama saya di blog personal saya dan di blog ini saya menggunakan teknologi atau stak yang lain lagi. Sebelumnya saya membuat blog di domain ini menggunakan [**Hexo**](https://hexo.io/) namun sekarang saya mencoba untuk mengganti menggunakan teknologi yang lain. Semoga yang stack teknologi yang saya gunakan cocok dengan saya.
