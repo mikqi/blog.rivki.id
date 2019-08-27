@@ -24,6 +24,7 @@ import Footer from "../components/Footer/Footer";
 import AuthorModel from "../models/author-model";
 import Disqus from "../components/Disqus/Disqus";
 import Layout from "../components/layout";
+import TOC from "../components/TOC/TOC"
 
 function parsePost(post, slug) {
   const result = post;
@@ -114,7 +115,7 @@ class PostTemplate extends React.Component {
                     </span>
                   </section>
                 </PostHeader>
-
+                <TOC tableOfContents={postNode.tableOfContents} show={false} />
                 <section
                   className="post-content"
                   dangerouslySetInnerHTML={{ __html: postNode.html }}
@@ -152,6 +153,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!, $next: String, $prev: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      tableOfContents
       timeToRead
       excerpt
       frontmatter {

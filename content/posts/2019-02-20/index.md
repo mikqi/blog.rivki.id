@@ -53,7 +53,7 @@ npx eslint --init
 ```
 Maka akan muncul seperti gambar di bawah ini.
 
-![init](/images/posts/code-quality-linter/eslint-init.jpg)
+![eslint init project](/images/posts/code-quality-linter/eslint-init.jpg)
 *eslint init*
 
 Kita diberikan 3 pilihan.
@@ -65,7 +65,7 @@ Yang pertama menggunakan 3 config yang sering dipakai yaitu:
 
 Yang kedua kita define sendiri basic rules yang akan digunakan dan yang ketiga sesuai itu meng-inspect files JavaScript di-project. Disini saya sarankan menggunakan opsi kedua agar lebih mudah dan fleksible untuk custom-nya. Jika pilih yang ketiga akan diberikan pertanyaan seperti gambar di bawah ini.
 
-![questions](/images/posts/code-quality-linter/eslint-question.jpg)
+![eslint config questions](/images/posts/code-quality-linter/eslint-question.jpg)
 *eslint config*
 
 Lalu kita akan dibuatkan files `.eslintrc.js`. Contoh isi file-nya seperti di bawah ini.
@@ -107,7 +107,7 @@ Untuk melihat *command* apa saja yang dapat dilakukan oleh *ESLint* gunakan *com
 
 Setelah kita melakukan integrasi dengan projek ketika editor kita support dengan *ESLint* akan muncul *underscor* merah atau kuning seperti gambar di bawah ini.
 
-![action](/images/posts/code-quality-linter/eslint-action.jpg)
+![eslint in action](/images/posts/code-quality-linter/eslint-action.jpg)
 *eslint in action*
 
 Ini menandakan bahwa *code* yang kita buat tidak sesuai dengan aturan yang sudah di-*define* oleh *ESLint*. Kita dipaksa untuk ubah *code* tersebut agar *underscore* merah tersebut hilang.
@@ -126,7 +126,7 @@ Tambahkan juga script di file `package.json` seperti script di bawah ini.
 
 Jika sudah ditambahkan script tersebut kita tinggal menjalankan command `yarn lint:scripts`  atau `npm run lint:scripts`pada *terminal*. Jika terdapat kesalahan pada kode yang sudah kita buat maka akan muncul *error* atau *warning* setelah menajalankan *linter*. Contoh error seperti gambar di bawah ini.
 
-![init](/images/posts/code-quality-linter/eslint-terminal.jpg)
+![error di terminal](/images/posts/code-quality-linter/eslint-terminal.jpg)
 *error di terminal*
 
 ps. Untuk flag `--fix` itu berfungsi untuk otomatis melakukan perbaikan terhadap kode yang dapat diperbaiki oleh *linte* sedangkan yang tidak bisa hanya akan dimunculkan dihasil terminal.
@@ -139,17 +139,17 @@ Jika kita ingin *ESLint* dapat melakukan pengecekan terhadap file berekstensi `.
 * Pertama tambahkan [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) dengan cara command berikut `yarn add --dev eslint-plugin-vue`
 * Setelah itu edit file `.eslintrc.js` di *property* `extends`. *Value* dari *property* ini dapat berupa *String* ataupun *Array*. Karena akan ditambahkan rules lain untuk `.vue` *file* maka kita menggunakan *value* *array*. Tambah `‘plugin:vue/strongly-recommended’` di *index* ke 1 maka akan seperti gambar di bawah ini. Untuk rules plugins dapat dilihat [di sini](https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/README.md).
 
-![init](/images/posts/code-quality-linter/eslint-extend.jpg)
+![extend config](/images/posts/code-quality-linter/eslint-extend.jpg)
 *extend configs*
 
 * Setelah itu edit sedikit *scripts* untuk menajalankan *ESLint* di file `package.json`. Tambahkan tipe *fil* `.vue` pada script-nya. Contoh akhir akan seperti gambar di bawah ini.
 
-![init](/images/posts/code-quality-linter/eslint-update.jpg)
+![update script](/images/posts/code-quality-linter/eslint-update.jpg)
 *update script*
 
 Setelah itu jika kita jalankan `yarn lint` maka akan muncul *error* pada `.vue` *file* contohnya seperti gambar di bawah ini.
 
-![init](/images/posts/code-quality-linter/eslint-more-warning.jpg)
+![vue warning](/images/posts/code-quality-linter/eslint-more-warning.jpg)
 *vue warning*
 
 Setelah itu tinggal ikuti rules yang sudah ditentukan diawal oleh *ESLint*.
