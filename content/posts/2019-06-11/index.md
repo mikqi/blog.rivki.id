@@ -19,9 +19,10 @@ Angka-angka tersebut dinamakkan [Semantic Versioning](https://semver.org) atau b
 
 ## Apa sih maksud angka-angkanya?
 Dalam *SemVer* dibagi menjadi 3 versi angka. Misalkan kita memiliki dependency sebagai berikut `typescript@3.4.5`. Angka tersebut menunjukan jenis atau apa saja yang berubah atau di update di dependency tersebut dan menyebut angka tersebut dari kiri ke kanan sebagai `Major`, `Minor` dan `Patch`.
-|   3   |   .   |   4   |   .   |   5   |
-| :---: | :---: | :---: | :---: | :---: |
+
 | Major |       | Minor |       | Patch |
+| :---: | :---: | :---: | :---: | :---: |
+|   3   |   .   |   4   |   .   |   5   |
 
 Biasanya kalo kita sering menggunakan library orang, kita secara tidak sadar pasti memperhatikan versi atau angka tersebut. Versi atau angka tersebut memberi tahu kita apa sih yang di update oleh maintainer tersebut. Nah jika kita akan membuat library, kita juga harus memperhatikan versi karena *versioning itu udah ada standar bakunya*.
 
