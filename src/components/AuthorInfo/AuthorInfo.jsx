@@ -1,48 +1,37 @@
-import React from "react";
-import { Link } from "gatsby";
-import "./AuthorInfo.css";
-import AuthorMeta from "../AuthorMeta/AuthorMeta";
-import AuthorLocation from "../AuthorLocation/AuthorLocation";
-import AuthorWebsite from "../AuthorWebsite/AuthorWebsite";
-import AuthorLink from "../AuthorLink/AuthorLink";
+import React from 'react'
+import { Link } from 'gatsby'
+import './AuthorInfo.css'
+import AuthorMeta from '../AuthorMeta/AuthorMeta'
+import AuthorWebsite from '../AuthorWebsite/AuthorWebsite'
 
 const Bio = props => {
-  const { bio, morePostsUrl } = props;
+  const { bio, morePostsUrl } = props
   if (bio) {
-    return <p>{bio}</p>;
+    return <p>{bio}</p>
   }
   return (
     <p>
-      Read 
-      {' '}
-      <Link to={morePostsUrl}>more posts</Link>
-      {' '}
-by this author.
+      Read <Link to={morePostsUrl}>more posts</Link> by this author.
     </p>
-  );
-};
+  )
+}
 
 class AuthorInfo extends React.Component {
   render() {
-    const { prefix } = this.props;
-    const { uid, name, image, bio, url, location } = this.props.author;
-    const authorInfoUrl = prefix ? `${prefix}/${uid}` : uid;
+    const { name, image, bio, url } = this.props.author
     if (image) {
       return (
         <section className="author">
-          <h4>
-            <AuthorLink url={authorInfoUrl} name={name} />
-          </h4>
-          <Bio bio={bio} morePostsUrl={authorInfoUrl} />
+          <h4>{name}</h4>
+          <Bio bio={bio} />
           <AuthorMeta>
-            <AuthorLocation location={location} />
             <AuthorWebsite url={url} />
           </AuthorMeta>
         </section>
-      );
+      )
     }
-    return null;
+    return null
   }
 }
 
-export default AuthorInfo;
+export default AuthorInfo
