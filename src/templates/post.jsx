@@ -1,40 +1,39 @@
-import { graphql } from "gatsby";
-import React from "react";
-import Helmet from "react-helmet";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import MainHeader from "../components/MainHeader/MainHeader";
-import MainNav from "../components/MainNav/MainNav";
-import BlogLogo from "../components/BlogLogo/BlogLogo";
-import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Nav/Nav";
-import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
-import MainContent from "../components/MainContent/MainContent";
-import PostHeader from "../components/PostHeader/PostHeader";
-import PostFormatting from "../components/PostFormatting/PostFormatting";
-import PostDate from "../components/PostDate/PostDate";
-import PostFooter from "../components/PostFooter/PostFooter";
-import AuthorImage from "../components/AuthorImage/AuthorImage";
-import AuthorInfo from "../components/AuthorInfo/AuthorInfo";
-import PostShare from "../components/PostShare/PostShare";
-import GhostSubscribe from "../components/GhostSubscribe/GhostSubscribe";
-import ReadNext from "../components/ReadNext/ReadNext";
-import PostTags from "../components/PostTags/PostTags";
-import Footer from "../components/Footer/Footer";
-import AuthorModel from "../models/author-model";
-import Disqus from "../components/Disqus/Disqus";
-import Layout from "../components/layout";
-import TOC from "../components/TOC/TOC"
+import { graphql } from 'gatsby'
+import React from 'react'
+import Helmet from 'react-helmet'
+import SEO from '../components/SEO/SEO'
+import config from '../../data/SiteConfig'
+import MainHeader from '../components/MainHeader/MainHeader'
+import MainNav from '../components/MainNav/MainNav'
+import BlogLogo from '../components/BlogLogo/BlogLogo'
+import Drawer from '../components/Drawer/Drawer'
+import Navigation from '../components/Nav/Nav'
+import SiteWrapper from '../components/SiteWrapper/SiteWrapper'
+import MainContent from '../components/MainContent/MainContent'
+import PostHeader from '../components/PostHeader/PostHeader'
+import PostFormatting from '../components/PostFormatting/PostFormatting'
+import PostDate from '../components/PostDate/PostDate'
+import PostFooter from '../components/PostFooter/PostFooter'
+import AuthorImage from '../components/AuthorImage/AuthorImage'
+import AuthorInfo from '../components/AuthorInfo/AuthorInfo'
+import PostShare from '../components/PostShare/PostShare'
+import ReadNext from '../components/ReadNext/ReadNext'
+import PostTags from '../components/PostTags/PostTags'
+import Footer from '../components/Footer/Footer'
+import AuthorModel from '../models/author-model'
+import Disqus from '../components/Disqus/Disqus'
+import Layout from '../components/layout'
+import TOC from '../components/TOC/TOC'
 
 function parsePost(post, slug) {
-  const result = post;
+  const result = post
   if (!result.id) {
-    result.id = slug;
+    result.id = slug
   }
   if (!result.id) {
-    result.category_id = config.postDefaultCategoryID;
+    result.category_id = config.postDefaultCategoryID
   }
-  return result;
+  return result
 }
 
 const formatReadNext = value => ({
@@ -42,49 +41,49 @@ const formatReadNext = value => ({
   title: value.frontmatter.title,
   cover: value.frontmatter.cover,
   excerpt: value.excerpt
-});
+})
 
 class PostTemplate extends React.Component {
   state = {
     menuOpen: false
-  };
+  }
 
   handleOnClick = evt => {
-    evt.stopPropagation();
+    evt.stopPropagation()
     if (this.state.menuOpen) {
-      this.closeMenu();
+      this.closeMenu()
     } else {
-      this.openMenu();
+      this.openMenu()
     }
-  };
+  }
 
   handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
-  };
+    evt.stopPropagation()
+    this.closeMenu()
+  }
 
   openMenu = () => {
-    this.setState({ menuOpen: true });
-  };
+    this.setState({ menuOpen: true })
+  }
 
   closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
+    this.setState({ menuOpen: false })
+  }
 
   render() {
-    const { location, data } = this.props;
-    const { slug, next, prev } = this.props.pageContext;
-    const postNode = this.props.data.markdownRemark;
-    const post = parsePost(postNode.frontmatter, slug);
-    const { cover, title, date, author, tags } = post;
-    const className = post.post_class ? post.post_class : "post";
+    const { location, data } = this.props
+    const { slug, next, prev } = this.props.pageContext
+    const postNode = this.props.data.markdownRemark
+    const post = parsePost(postNode.frontmatter, slug)
+    const { cover, title, date, author, tags } = post
+    const className = post.post_class ? post.post_class : 'post'
     const authorData = AuthorModel.getAuthor(
       this.props.data.authors.edges,
       author,
       config.blogAuthorId
-    );
-    const getNextData = () => (next ? formatReadNext(data.next) : null);
-    const getPrevData = () => (prev ? formatReadNext(data.prev) : null);
+    )
+    const getNextData = () => (next ? formatReadNext(data.next) : null)
+    const getPrevData = () => (prev ? formatReadNext(data.prev) : null)
 
     return (
       <Layout location={this.props.location}>
@@ -94,12 +93,11 @@ class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
 
-
           <SiteWrapper>
             <MainHeader className="post-head" cover={cover}>
               <MainNav>
                 <BlogLogo logo={config.siteLogo} title={config.siteTitle} />
-                {config.siteNavigation ? <Navigation /> : '' }
+                {config.siteNavigation ? <Navigation /> : ''}
               </MainNav>
             </MainHeader>
             <MainContent>
@@ -109,9 +107,13 @@ class PostTemplate extends React.Component {
                   <section className="post-meta">
                     <PostDate date={date} />
                     <PostTags prefix=" on " tags={tags} />
-                    <span style={{paddingLeft: 6, paddingRight: 6, fontSize: 13}}>•</span>
-                    <span style={{fontSize: 13}}>
-                      {`${postNode.timeToRead } min read`}
+                    <span
+                      style={{ paddingLeft: 6, paddingRight: 6, fontSize: 13 }}
+                    >
+                      •
+                    </span>
+                    <span style={{ fontSize: 13 }}>
+                      {`${postNode.timeToRead} min read`}
                     </span>
                   </section>
                 </PostHeader>
@@ -129,7 +131,6 @@ class PostTemplate extends React.Component {
                     postPath={location.pathname}
                     config={config}
                   />
-                  <GhostSubscribe />
                   <Disqus postNode={postNode} />
                 </PostFooter>
               </PostFormatting>
@@ -144,7 +145,7 @@ class PostTemplate extends React.Component {
           </SiteWrapper>
         </Drawer>
       </Layout>
-    );
+    )
   }
 }
 
@@ -205,6 +206,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default PostTemplate;
+export default PostTemplate

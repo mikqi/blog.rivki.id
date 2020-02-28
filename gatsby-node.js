@@ -23,7 +23,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`
-    } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
+    } else if (parsedFilePath.name !== 'blog' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
     } else if (parsedFilePath.dir === '') {
       slug = `/${parsedFilePath.name}/`
@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const indexPage = path.resolve('src/templates/index.jsx')
+    const blogPage = path.resolve('src/templates/blog.jsx')
     const postPage = path.resolve('src/templates/post.jsx')
     const tagPage = path.resolve('src/templates/tag.jsx')
 
@@ -89,10 +89,12 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Creates Index page
+        const blogFormatter = route => `/blog/${route !== 1 ? route : ''}`
         createPaginationPages({
           createPage,
           edges: result.data.allMarkdownRemark.edges,
-          component: indexPage,
+          component: blogPage,
+          pathFormatter: blogFormatter,
           limit: siteConfig.sitePaginationLimit
         })
 

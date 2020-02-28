@@ -1,47 +1,46 @@
-import { graphql } from "gatsby";
-import React from "react";
-import Helmet from "react-helmet";
-import { Link } from "react-scroll";
-import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import Drawer from "../components/Drawer/Drawer";
-import Navigation from "../components/Nav/Nav"
-import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
-import Footer from "../components/Footer/Footer";
-import MainHeader from "../components/MainHeader/MainHeader";
-import BlogHomeLogo from "../components/BlogHomeLogo/BlogHomeLogo";
-import PageTitle from "../components/PageTitle/PageTitle";
-import PageDescription from "../components/PageDescription/PageDescription";
-import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
-import Layout from "../components/layout";
+import { graphql } from 'gatsby'
+import React from 'react'
+import Helmet from 'react-helmet'
+import PostListing from '../components/PostListing/PostListing'
+import SEO from '../components/SEO/SEO'
+import config from '../../data/SiteConfig'
+import Drawer from '../components/Drawer/Drawer'
+import Navigation from '../components/Nav/Nav'
+import SiteWrapper from '../components/SiteWrapper/SiteWrapper'
+import Footer from '../components/Footer/Footer'
+import MainHeader from '../components/MainHeader/MainHeader'
+import BlogHomeLogo from '../components/BlogHomeLogo/BlogHomeLogo'
+import PageTitle from '../components/PageTitle/PageTitle'
+import PageDescription from '../components/PageDescription/PageDescription'
+import PaginatedContent from '../components/PaginatedContent/PaginatedContent'
+import Layout from '../components/layout'
 
-class IndexTemplate extends React.Component {
+class BlogTemplate extends React.Component {
   state = {
     menuOpen: false
-  };
+  }
 
   handleOnClick = evt => {
-    evt.stopPropagation();
+    evt.stopPropagation()
     if (this.state.menuOpen) {
-      this.closeMenu();
+      this.closeMenu()
     } else {
-      this.openMenu();
+      this.openMenu()
     }
-  };
+  }
 
   handleOnClose = evt => {
-    evt.stopPropagation();
-    this.closeMenu();
-  };
+    evt.stopPropagation()
+    this.closeMenu()
+  }
 
   openMenu = () => {
-    this.setState({ menuOpen: true });
-  };
+    this.setState({ menuOpen: true })
+  }
 
   closeMenu = () => {
-    this.setState({ menuOpen: false });
-  };
+    this.setState({ menuOpen: false })
+  }
 
   render() {
     const {
@@ -52,8 +51,8 @@ class IndexTemplate extends React.Component {
       limit,
       prev,
       next
-    } = this.props.pageContext;
-    const authorsEdges = this.props.data.authors.edges;
+    } = this.props.pageContext
+    const authorsEdges = this.props.data.authors.edges
 
     return (
       <Layout location={this.props.location}>
@@ -68,23 +67,17 @@ class IndexTemplate extends React.Component {
               <MainHeader cover={config.siteCover}>
                 <div className="vertical">
                   <div className="main-header-content inner">
-                    {config.siteNavigation ? <Navigation /> : '' }
-                    <BlogHomeLogo logo={config.siteLogo} style={{float: 'none'}} title={config.siteTitle} />
+                    {config.siteNavigation ? <Navigation /> : ''}
+                    <BlogHomeLogo
+                      logo={config.siteLogo}
+                      style={{ float: 'none' }}
+                      title={config.siteTitle}
+                    />
 
                     <PageTitle text={config.siteTitle} />
                     <PageDescription text={config.siteTitleAlt} />
                   </div>
                 </div>
-                <Link
-                  className="scroll-down icon-arrow-left"
-                  to="content"
-                  data-offset="-45"
-                  spy
-                  smooth
-                  duration={500}
-                >
-                  <span className="hidden">Scroll Down</span>
-                </Link>
               </MainHeader>
 
               <PaginatedContent
@@ -108,13 +101,13 @@ class IndexTemplate extends React.Component {
           </SiteWrapper>
         </Drawer>
       </Layout>
-    );
+    )
   }
 }
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query IndexQuery {
+  query BlogQuery {
     # posts data comes from the context
     # authors
     authors: allAuthorsJson {
@@ -129,6 +122,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default IndexTemplate;
+export default BlogTemplate
