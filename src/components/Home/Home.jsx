@@ -1,4 +1,5 @@
 import React from 'react'
+import './Home.css'
 
 export default function() {
   return (
@@ -9,7 +10,13 @@ export default function() {
           <h1 className="f1-m f1-l f2-ns ma0">I&apos;m Muhammad Rivki,</h1>
           <h2 className="f2-m f2-l f3-ns fw1 ma0 lh-copy">
             Frontend Engineer at&nbsp;
-            <a href="https://bukalapak.com" title="Bukalapak">
+            <a
+              href="https://bukalapak.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bukalapak"
+              title="Bukalapak"
+            >
               Bukalapak
             </a>
           </h2>
@@ -25,7 +32,7 @@ export default function() {
             I spend most of my day working with the frontend things and read
             articles at feedly. You can find me on&nbsp;
             <a
-              href="https://facebook.com/this.mikqi"
+              href="https://facebook.com/this.rivki"
               target="_blank"
               rel="noopener noreferrer"
               className="underline facebook"
