@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: */tags/
 
-sitemap: https://blog.rivki.id/sitemap.xml
+sitemap: https://this.rivki.id/sitemap.xml

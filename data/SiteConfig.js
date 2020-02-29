@@ -2,10 +2,10 @@ module.exports = {
   blogPostDir: 'posts', // The name of directory that contains your posts.
   blogAuthorDir: 'authors', // The name of directory that contains your 'authors' folder.
   blogAuthorId: 'mikqi', // The default and fallback author ID used for blog posts without a defined author.
-  siteTitle: 'Muhammad Rivki Blog', // Site title.
+  siteTitle: 'Muhammad Rivki', // Site title.
   siteTitleAlt: 'Front-End Engineer', // Alternative site title for SEO.
   siteLogo: '/logos/avatar.png', // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
-  siteUrl: 'https://blog.rivki.id', // Domain of your website without pathPrefix.
+  siteUrl: 'https://this.rivki.id', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
     'Muhammad Rivki, a Frontend Engineer from Jakarta, Indonesia. who loves simplicity, create great looking web products and performance first.', // Website description used for RSS feeds/meta description tag.
