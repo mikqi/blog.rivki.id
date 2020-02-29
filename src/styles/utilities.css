@@ -17,6 +17,10 @@
   height: 100vh;
 }
 
+.vw-100 {
+  width: 100vw;
+}
+
 .center {
   margin-right: auto;
   margin-left: auto;
@@ -24,6 +28,10 @@
 
 .lh-copy {
   line-height: 1.5;
+}
+
+.tracked-sm {
+  letter-spacing: 0.5px;
 }
 
 /*
@@ -260,7 +268,7 @@
   padding: 0;
 }
 .pa1 {
-  padding: 0.4rem;
+  padding: 0.4µrem;
 }
 .pa2 {
   padding: 0.8rem;
@@ -284,7 +292,7 @@
   padding-left: 0;
 }
 .pl1 {
-  padding-left: 0.4rem;
+  padding-left: 0.4µrem;
 }
 .pl2 {
   padding-left: 0.8rem;
@@ -308,7 +316,7 @@
   padding-right: 0;
 }
 .pr1 {
-  padding-right: 0.4rem;
+  padding-right: 0.4µrem;
 }
 .pr2 {
   padding-right: 0.8rem;
@@ -332,7 +340,7 @@
   padding-bottom: 0;
 }
 .pb1 {
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.4µrem;
 }
 .pb2 {
   padding-bottom: 0.8rem;
@@ -356,7 +364,7 @@
   padding-top: 0;
 }
 .pt1 {
-  padding-top: 0.4rem;
+  padding-top: 0.4µrem;
 }
 .pt2 {
   padding-top: 0.8rem;
@@ -381,8 +389,8 @@
   padding-bottom: 0;
 }
 .pv1 {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.4µrem;
+  padding-bottom: 0.4µrem;
 }
 .pv2 {
   padding-top: 0.8rem;
@@ -413,8 +421,8 @@
   padding-right: 0;
 }
 .ph1 {
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-left: 0.4µrem;
+  padding-right: 0.4µrem;
 }
 .ph2 {
   padding-left: 0.8rem;
@@ -444,7 +452,7 @@
   margin: 0;
 }
 .ma1 {
-  margin: 0.4rem;
+  margin: 0.4µrem;
 }
 .ma2 {
   margin: 0.8rem;
@@ -468,7 +476,7 @@
   margin-left: 0;
 }
 .ml1 {
-  margin-left: 0.4rem;
+  margin-left: 0.4µrem;
 }
 .ml2 {
   margin-left: 0.8rem;
@@ -492,7 +500,7 @@
   margin-right: 0;
 }
 .mr1 {
-  margin-right: 0.4rem;
+  margin-right: 0.4µrem;
 }
 .mr2 {
   margin-right: 0.8rem;
@@ -516,7 +524,7 @@
   margin-bottom: 0;
 }
 .mb1 {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.4µrem;
 }
 .mb2 {
   margin-bottom: 0.8rem;
@@ -540,7 +548,7 @@
   margin-top: 0;
 }
 .mt1 {
-  margin-top: 0.4rem;
+  margin-top: 0.4µrem;
 }
 .mt2 {
   margin-top: 0.8rem;
@@ -565,8 +573,8 @@
   margin-bottom: 0;
 }
 .mv1 {
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
+  margin-top: 0.4µrem;
+  margin-bottom: 0.4µrem;
 }
 .mv2 {
   margin-top: 0.8rem;
@@ -597,8 +605,8 @@
   margin-right: 0;
 }
 .mh1 {
-  margin-left: 0.4rem;
-  margin-right: 0.4rem;
+  margin-left: 0.4µrem;
+  margin-right: 0.4µrem;
 }
 .mh2 {
   margin-left: 0.8rem;
@@ -648,7 +656,7 @@
 }
 
 /* NS */
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 10em) {
   .f1-ns {
     font-size: 4.8rem;
   }
@@ -713,10 +721,14 @@
   .w-100-ns {
     width: 100%;
   }
+
+  .w-break-ns {
+    word-break: break-word;
+  }
 }
 
 /* L */
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 53.333333333em) {
   .f1-l {
     font-size: 4.8rem;
   }
@@ -783,7 +795,7 @@
   }
 }
 
-@media screen and (min-width: 30em) and (max-width: 60em) {
+@media screen and (min-width: 26.666666667em) and (max-width: 53.3333333em) {
   .f1-m {
     font-size: 4.8rem;
   }

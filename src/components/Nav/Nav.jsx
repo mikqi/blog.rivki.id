@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 import React from 'react'
+import { Link } from 'gatsby'
 import './Nav.css'
 
 let Velocity
@@ -15,53 +16,70 @@ export default class Nav extends React.Component {
       const overlayContent = document.querySelector('.c-overlay-content')
 
       // eslint-disable-next-line no-inner-declarations
-      function layerInit () {
+      function layerInit() {
         // eslint-disable-next-line no-restricted-properties
-        const diameterValue = (Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2)) * 2)
-        Velocity(overlayNav.querySelector('span'), {
-          scaleX: 0,
-          scaleY: 0,
-          translateZ: 0
-        }, 50)
+        const diameterValue =
+          Math.sqrt(
+            Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2)
+          ) * 2
+        Velocity(
+          overlayNav.querySelector('span'),
+          {
+            scaleX: 0,
+            scaleY: 0,
+            translateZ: 0
+          },
+          50
+        )
 
-        Velocity(overlayNav.querySelector('span'), {
-          height: `${diameterValue  }px`,
-          width: `${diameterValue  }px`,
-          top: `${-(diameterValue / 2)  }px`,
-          left: `${-(diameterValue / 2)  }px`
-        }, 0)
+        Velocity(
+          overlayNav.querySelector('span'),
+          {
+            height: `${diameterValue}px`,
+            width: `${diameterValue}px`,
+            top: `${-(diameterValue / 2)}px`,
+            left: `${-(diameterValue / 2)}px`
+          },
+          0
+        )
         // overlayNav.querySelector('span').velocity(.velocity()
 
-        Velocity(overlayContent.querySelector('span'), {
-          scaleX: 0,
-          scaleY: 0,
-          translateZ: 0
-        }, 50)
-      
-        Velocity(overlayContent.querySelector('span'), {
-          height: `${diameterValue  }px`,
-          width: `${diameterValue  }px`,
-          top: `${-(diameterValue / 2)  }px`,
-          left: `${-(diameterValue / 2)  }px`
-        }, 0)
+        Velocity(
+          overlayContent.querySelector('span'),
+          {
+            scaleX: 0,
+            scaleY: 0,
+            translateZ: 0
+          },
+          50
+        )
+
+        Velocity(
+          overlayContent.querySelector('span'),
+          {
+            height: `${diameterValue}px`,
+            width: `${diameterValue}px`,
+            top: `${-(diameterValue / 2)}px`,
+            left: `${-(diameterValue / 2)}px`
+          },
+          0
+        )
 
         // overlayContent.querySelector('span').velocity().velocity()
       }
-      
+
       // inizialize navigation and content layers
       layerInit()
       window.addEventListener('resize', () => {
         window.requestAnimationFrame(layerInit)
       })
-  
-      navLinks.forEach((nav) =>
-        nav.addEventListener('click', () =>
-          navTrigger.click()
-        )
+
+      navLinks.forEach(nav =>
+        nav.addEventListener('click', () => navTrigger.click())
       )
     }
   }
-  
+
   // eslint-disable-next-line class-methods-use-this
   handleClick = () => {
     const overlayNav = document.querySelector('.c-overlay-nav')
@@ -73,79 +91,126 @@ export default class Nav extends React.Component {
       // it means navigation is not visible yet - open it and animate navigation layer
       toggleNav.addClass('close-nav')
 
-      Velocity(overlayNav.querySelector('span'), {
-        translateZ: 0,
-        scaleX: 1,
-        scaleY: 1
-      }, 500, 'easeInCubic', () => {
-        navigation.addClass('fade-in')
-      })
-
+      Velocity(
+        overlayNav.querySelector('span'),
+        {
+          translateZ: 0,
+          scaleX: 1,
+          scaleY: 1
+        },
+        500,
+        'easeInCubic',
+        () => {
+          navigation.addClass('fade-in')
+        }
+      )
     } else {
       // navigation is open - close it and remove navigation layer
       toggleNav.removeClass('close-nav')
 
-      Velocity(overlayContent.querySelector('span'), {
-        translateZ: 0,
-        scaleX: 1,
-        scaleY: 1
-      }, 500, 'easeInCubic', () => {
-        navigation.removeClass('fade-in')
-        Velocity(overlayNav.querySelector('span'), {
+      Velocity(
+        overlayContent.querySelector('span'),
+        {
           translateZ: 0,
-          scaleX: 0,
-          scaleY: 0
-        }, 0)
-
-        const events = ['transitionend', 'webkitTransitionEnd', 'otransitionend', 'oTransitionEnd', 'msTransitionEnd']
-        overlayContent.addClass('is-hidden')
-        events.forEach(e => {
-          overlayContent.addEventListener(e, () => {
-            Velocity(overlayContent.querySelector('span'), {
+          scaleX: 1,
+          scaleY: 1
+        },
+        500,
+        'easeInCubic',
+        () => {
+          navigation.removeClass('fade-in')
+          Velocity(
+            overlayNav.querySelector('span'),
+            {
               translateZ: 0,
               scaleX: 0,
               scaleY: 0
-            }, 0, () => {
-              overlayContent.removeClass('is-hidden')
+            },
+            0
+          )
+
+          const events = [
+            'transitionend',
+            'webkitTransitionEnd',
+            'otransitionend',
+            'oTransitionEnd',
+            'msTransitionEnd'
+          ]
+          overlayContent.addClass('is-hidden')
+          events.forEach(e => {
+            overlayContent.addEventListener(e, () => {
+              Velocity(
+                overlayContent.querySelector('span'),
+                {
+                  translateZ: 0,
+                  scaleX: 0,
+                  scaleY: 0
+                },
+                0,
+                () => {
+                  overlayContent.removeClass('is-hidden')
+                }
+              )
             })
           })
-        })
 
-        if (document.querySelector('html').hasClass('no-csstransitions')) {
-          Velocity(overlayContent.querySelector('span'), {
-            translateZ: 0,
-            scaleX: 0,
-            scaleY: 0
-          }, 0, () => {
-            overlayContent.removeClass('is-hidden')
-          })
+          if (document.querySelector('html').hasClass('no-csstransitions')) {
+            Velocity(
+              overlayContent.querySelector('span'),
+              {
+                translateZ: 0,
+                scaleX: 0,
+                scaleY: 0
+              },
+              0,
+              () => {
+                overlayContent.removeClass('is-hidden')
+              }
+            )
+          }
         }
-      })
+      )
     }
   }
 
-  render () {
+  render() {
     return (
       <div>
         <nav>
           <ul className="c-primary-nav">
-            <li><a className="js-nav-link" href="https://this.rivki.id/">Home</a></li>
-            <li><a className="js-nav-link" href="https://this.rivki.id/about">About</a></li>
+            <li>
+              <Link className="js-nav-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className="js-nav-link" to="/about">
+                About
+              </Link>
+            </li>
             {/* <li><a className="js-nav-link" href="portfolio">Portfolio</a></li> */}
-            <li><a className="js-nav-link" href="/">Blog</a></li>
+            <li>
+              <Link className="js-nav-link" to="/blog">
+                Blog
+              </Link>
+            </li>
           </ul>
         </nav>
-    
+
         <div className="c-overlay-nav">
           <span />
         </div>
-    
+
         <div className="c-overlay-content">
           <span />
         </div>
-    
-        <a href="#0" className="c-nav-trigger js-nav-trigger" onClick={this.handleClick}>
-Menu
+
+        <a
+          href="#0"
+          className="c-nav-trigger js-nav-trigger"
+          onClick={this.handleClick}
+        >
+          Menu
           <span className="c-icon" />
         </a>
       </div>
