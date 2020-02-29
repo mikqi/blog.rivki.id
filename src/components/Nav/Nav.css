@@ -24,13 +24,17 @@ body {
   display: inline-block;
 }
 
+.poppins {
+  font-family: 'Poppins';
+}
+
 .js-nav-link {
   font-family: 'Poppins', 'open-sans';
   color: #ffffff;
 }
 
 .js-nav-link:hover {
-  color: #fee994;
+  color: #2199e8;
 }
 
 .c-logo {
@@ -91,9 +95,9 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   /* apply transition to transform property */
-  -webkit-transition: -webkit-transform .3s;
-  -moz-transition: -moz-transform .3s;
-  transition: transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
 }
 
 .c-nav-trigger .c-icon::before {
@@ -150,7 +154,7 @@ body {
 }
 
 .c-nav-trigger::after {
-  background-color: #fee994;
+  background-color: #2199e8;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -330,9 +334,9 @@ body {
   /* background fades out at the end of the animation */
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-  -moz-transition: opacity .3s 0s, visibility 0s .3s;
-  transition: opacity .3s 0s, visibility 0s .3s;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
 }
 
 .c-overlay-nav {
@@ -350,5 +354,5 @@ body {
 }
 
 .c-overlay-content span {
-  background-color: #fee994;
+  background-color: #2199e8;
 }
