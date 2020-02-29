@@ -1,42 +1,44 @@
 ---
-title: "Improve Your Code Quality With Linter"
-cover: "https://i.github-camo.com/747890af1149385e1e7b5353c5d2b2133017b499/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f786f6a732f61746f6d2d6c696e7465722d786f2f76302e32392e302f73637265656e73686f742e706e67"
-author: "mikqi"
-date: "2019-02-20"
-category: "tutorial"
+title: 'Improve Your Code Quality With Linter'
+cover: '/images/posts/code-quality-linter/cover.jpg'
+author: 'mikqi'
+date: '2019-02-20'
+category: 'tutorial'
 tags:
-    - tutorial
-    - javascript
+  - tutorial
+  - javascript
 ---
 
 Lint atau linter adalah alat untuk menganalisa source code untuk menandai errors, bug, code convention dan memverifikasi kualitas kode. Seberapa penting sih linter dengan projek yang kita buat? Jawabannya menurut saya itu penting. Dengan adanya linter kita dipaksa untuk belajar dan disiplin untuk menulis kode yang bagus dan rapi tapi tetap tidak bugfree dan untuk projek skala besar linter sangat dianjurkan agar semua yang ikut berkontribusi menggunakan code convention yang sama dan tidak berbeda-beda. Disini akan berfokus pada 2 jenis linter, yaitu linter khusus JavaScript dan CSS.
 
 ### JavaScript Linter
 
-Lalu *linter* untuk JavaScript  berikut adalah list linter yang terkenal dan sering dipakai:
-* [ESLint](https://eslint.org/)
-* [Prettier](https://prettier.io/)
-* [StandardJS](https://standardjs.com)
-* [JSLint](https://jslint.com/)
-* [JSHint](https://jshint.com/)
+Lalu _linter_ untuk JavaScript berikut adalah list linter yang terkenal dan sering dipakai:
 
-Linter yang sering digunakan di projek Bukalapak adalah *ESLint*. Salah satu linter yang perkembangannya sangat pesat dan banyak di *support* oleh komunitas.
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [StandardJS](https://standardjs.com)
+- [JSLint](https://jslint.com/)
+- [JSHint](https://jshint.com/)
+
+Linter yang sering digunakan di projek Bukalapak adalah _ESLint_. Salah satu linter yang perkembangannya sangat pesat dan banyak di _support_ oleh komunitas.
 
 ### CSS Linter
 
-Berikut adalah *linter* untuk CSS yang terkenal dan sering dipakai:
-* [StyleLint](https://stylelint.io/) 
-* [SCSSLint](https://github.com/brigade/scss-lint)
-* [Stylefmt](https://github.com/morishitter/stylefmt)
-* [CSSLint](http://csslint.net/) 
+Berikut adalah _linter_ untuk CSS yang terkenal dan sering dipakai:
 
-Untuk linter CSS sendiri yang sering digunakan di projek Bukalapak adalah *scss-lint* karena base style yang digunakan oleh [Bukalapak Arin](https://github.com/bukalapak/arin) menggunakan SCSS tapi disini saya akan menjelaskan integrasi projek menggunakan *stylelint* karena linter ini sangatlah fleksibel dan memiliki banyak plugin serta rules.
+- [StyleLint](https://stylelint.io/)
+- [SCSSLint](https://github.com/brigade/scss-lint)
+- [Stylefmt](https://github.com/morishitter/stylefmt)
+- [CSSLint](http://csslint.net/)
 
-## Integration Guide 
+Untuk linter CSS sendiri yang sering digunakan di projek Bukalapak adalah _scss-lint_ karena base style yang digunakan oleh [Bukalapak Arin](https://github.com/bukalapak/arin) menggunakan SCSS tapi disini saya akan menjelaskan integrasi projek menggunakan _stylelint_ karena linter ini sangatlah fleksibel dan memiliki banyak plugin serta rules.
+
+## Integration Guide
 
 ### ESLint Installation
 
-Cara mengintegrasikan *ESLint* ke sebuah projekpun tidak begitu sulit. Jika sudah memiliki JavaScript projek di repository Bukalapak cara install-nya cukup mudah, tinggal menjalankan *script* di bawah.
+Cara mengintegrasikan _ESLint_ ke sebuah projekpun tidak begitu sulit. Jika sudah memiliki JavaScript projek di repository Bukalapak cara install-nya cukup mudah, tinggal menjalankan _script_ di bawah.
 
 ```bash
 ### NPM
@@ -45,118 +47,107 @@ npm install -d eslint
 yarn add --dev eslint
 ```
 
-Setelah selesai install *ESLint* selanjutnya jalankan command berikut untuk menginisiasi projek menggunakan linter.
+Setelah selesai install _ESLint_ selanjutnya jalankan command berikut untuk menginisiasi projek menggunakan linter.
 
 ```bash
 ### NPM versi >= v5.2.0
 npx eslint --init
 ```
+
 Maka akan muncul seperti gambar di bawah ini.
 
 ![eslint init project](/images/posts/code-quality-linter/eslint-init.jpg)
-*eslint init*
+_eslint init_
 
 Kita diberikan 3 pilihan.
 Yang pertama menggunakan 3 config yang sering dipakai yaitu:
 
-* [Airbnb](https://github.com/airbnb/javascript) 
-* [Standard](https://github.com/standard/standard)
-* [Google](https://github.com/google/eslint-config-google)
+- [Airbnb](https://github.com/airbnb/javascript)
+- [Standard](https://github.com/standard/standard)
+- [Google](https://github.com/google/eslint-config-google)
 
 Yang kedua kita define sendiri basic rules yang akan digunakan dan yang ketiga sesuai itu meng-inspect files JavaScript di-project. Disini saya sarankan menggunakan opsi kedua agar lebih mudah dan fleksible untuk custom-nya. Jika pilih yang ketiga akan diberikan pertanyaan seperti gambar di bawah ini.
 
 ![eslint config questions](/images/posts/code-quality-linter/eslint-question.jpg)
-*eslint config*
+_eslint config_
 
 Lalu kita akan dibuatkan files `.eslintrc.js`. Contoh isi file-nya seperti di bawah ini.
 
 ```javascript
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true
+  env: {
+    browser: true,
+    es6: true
   },
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaVersion": 2015,
-    "sourceType": "module"
+  extends: 'eslint:recommended',
+  parserOptions: {
+    ecmaVersion: 2015,
+    sourceType: 'module'
   },
-  "rules": {
-    "indent": [
-      "error",
-      4
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "never"
-    ]
+  rules: {
+    indent: ['error', 4],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'never']
   }
-};
+}
 ```
 
-Di file tersebut kita bisa  meng-custom rules kita sendiri atau ambil rules yang sudah disediakan oleh komunitas. List rules dapat dilihat ditautan [berikut](https://eslint.org/docs/rules/).
-Untuk melihat *command* apa saja yang dapat dilakukan oleh *ESLint* gunakan *command* `npx eslint --help`.
+Di file tersebut kita bisa meng-custom rules kita sendiri atau ambil rules yang sudah disediakan oleh komunitas. List rules dapat dilihat ditautan [berikut](https://eslint.org/docs/rules/).
+Untuk melihat _command_ apa saja yang dapat dilakukan oleh _ESLint_ gunakan _command_ `npx eslint --help`.
 
-Setelah kita melakukan integrasi dengan projek ketika editor kita support dengan *ESLint* akan muncul *underscor* merah atau kuning seperti gambar di bawah ini.
+Setelah kita melakukan integrasi dengan projek ketika editor kita support dengan _ESLint_ akan muncul _underscor_ merah atau kuning seperti gambar di bawah ini.
 
 ![eslint in action](/images/posts/code-quality-linter/eslint-action.jpg)
-*eslint in action*
+_eslint in action_
 
-Ini menandakan bahwa *code* yang kita buat tidak sesuai dengan aturan yang sudah di-*define* oleh *ESLint*. Kita dipaksa untuk ubah *code* tersebut agar *underscore* merah tersebut hilang.
+Ini menandakan bahwa _code_ yang kita buat tidak sesuai dengan aturan yang sudah di-_define_ oleh _ESLint_. Kita dipaksa untuk ubah _code_ tersebut agar _underscore_ merah tersebut hilang.
 Tambahkan juga script di file `package.json` seperti script di bawah ini.
 
 ```json
 /* package.json */
 {
-	// ...
-	"scripts": {
-		"lint:scripts": "eslint --fix --ext .js --ignore-path .gitignore ."
-	}
-	// ...
+  // ...
+  "scripts": {
+    "lint:scripts": "eslint --fix --ext .js --ignore-path .gitignore ."
+  }
+  // ...
 }
 ```
 
-Jika sudah ditambahkan script tersebut kita tinggal menjalankan command `yarn lint:scripts`  atau `npm run lint:scripts`pada *terminal*. Jika terdapat kesalahan pada kode yang sudah kita buat maka akan muncul *error* atau *warning* setelah menajalankan *linter*. Contoh error seperti gambar di bawah ini.
+Jika sudah ditambahkan script tersebut kita tinggal menjalankan command `yarn lint:scripts` atau `npm run lint:scripts`pada _terminal_. Jika terdapat kesalahan pada kode yang sudah kita buat maka akan muncul _error_ atau _warning_ setelah menajalankan _linter_. Contoh error seperti gambar di bawah ini.
 
 ![error di terminal](/images/posts/code-quality-linter/eslint-terminal.jpg)
-*error di terminal*
+_error di terminal_
 
-ps. Untuk flag `--fix` itu berfungsi untuk otomatis melakukan perbaikan terhadap kode yang dapat diperbaiki oleh *linte* sedangkan yang tidak bisa hanya akan dimunculkan dihasil terminal.
-Untuk flag `--ext` untuk mem-*filter* *file* dengan *extension* apa saja yang akan dicek oleh *ESLint*.
+ps. Untuk flag `--fix` itu berfungsi untuk otomatis melakukan perbaikan terhadap kode yang dapat diperbaiki oleh _linte_ sedangkan yang tidak bisa hanya akan dimunculkan dihasil terminal.
+Untuk flag `--ext` untuk mem-_filter_ _file_ dengan _extension_ apa saja yang akan dicek oleh _ESLint_.
 
 ### ESLint and Single Vue Component
 
-Jika kita ingin *ESLint* dapat melakukan pengecekan terhadap file berekstensi `.vue` caranya tidak terlalu sulit.
+Jika kita ingin _ESLint_ dapat melakukan pengecekan terhadap file berekstensi `.vue` caranya tidak terlalu sulit.
 
-* Pertama tambahkan [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) dengan cara command berikut `yarn add --dev eslint-plugin-vue`
-* Setelah itu edit file `.eslintrc.js` di *property* `extends`. *Value* dari *property* ini dapat berupa *String* ataupun *Array*. Karena akan ditambahkan rules lain untuk `.vue` *file* maka kita menggunakan *value* *array*. Tambah `‘plugin:vue/strongly-recommended’` di *index* ke 1 maka akan seperti gambar di bawah ini. Untuk rules plugins dapat dilihat [di sini](https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/README.md).
+- Pertama tambahkan [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue) dengan cara command berikut `yarn add --dev eslint-plugin-vue`
+- Setelah itu edit file `.eslintrc.js` di _property_ `extends`. _Value_ dari _property_ ini dapat berupa _String_ ataupun _Array_. Karena akan ditambahkan rules lain untuk `.vue` _file_ maka kita menggunakan _value_ _array_. Tambah `‘plugin:vue/strongly-recommended’` di _index_ ke 1 maka akan seperti gambar di bawah ini. Untuk rules plugins dapat dilihat [di sini](https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/README.md).
 
 ![extend config](/images/posts/code-quality-linter/eslint-extend.jpg)
-*extend configs*
+_extend configs_
 
-* Setelah itu edit sedikit *scripts* untuk menajalankan *ESLint* di file `package.json`. Tambahkan tipe *fil* `.vue` pada script-nya. Contoh akhir akan seperti gambar di bawah ini.
+- Setelah itu edit sedikit _scripts_ untuk menajalankan _ESLint_ di file `package.json`. Tambahkan tipe _fil_ `.vue` pada script-nya. Contoh akhir akan seperti gambar di bawah ini.
 
 ![update script](/images/posts/code-quality-linter/eslint-update.jpg)
-*update script*
+_update script_
 
-Setelah itu jika kita jalankan `yarn lint` maka akan muncul *error* pada `.vue` *file* contohnya seperti gambar di bawah ini.
+Setelah itu jika kita jalankan `yarn lint` maka akan muncul _error_ pada `.vue` _file_ contohnya seperti gambar di bawah ini.
 
 ![vue warning](/images/posts/code-quality-linter/eslint-more-warning.jpg)
-*vue warning*
+_vue warning_
 
-Setelah itu tinggal ikuti rules yang sudah ditentukan diawal oleh *ESLint*.
+Setelah itu tinggal ikuti rules yang sudah ditentukan diawal oleh _ESLint_.
 
 ### Stylelint Installation
 
-Cara mengintegrasikan *Stylelint* tidak begitu sulit, sama seperti mengintegrasikan *ESLint* sebelumnya. Kita hanya cukup menambahkan *dependecies* *stylelint* dan konfigurasinya. Contoh seperti berikut:
+Cara mengintegrasikan _Stylelint_ tidak begitu sulit, sama seperti mengintegrasikan _ESLint_ sebelumnya. Kita hanya cukup menambahkan _dependecies_ _stylelint_ dan konfigurasinya. Contoh seperti berikut:
 
 ```bash
 ### NPM
@@ -165,20 +156,18 @@ npm install -d stylelint stylelint-config-standard
 yarn add --dev stylelint stylelint-config-standard
 ```
 
-Disini saya menggunakan *stylelint-config-standard* karena agar mudah diintegrasikan ke *Codeclimate* jika ingin mengintegrasikan dengan *Codeclimate* kedepannya. Jika ingin lihat *rules* dan *plugins* yang di-*support* oleh *Codeclimate* dapata dilihat pada [tautan ini](https://github.com/gilbarbara/codeclimate-stylelint).
+Disini saya menggunakan _stylelint-config-standard_ karena agar mudah diintegrasikan ke _Codeclimate_ jika ingin mengintegrasikan dengan _Codeclimate_ kedepannya. Jika ingin lihat _rules_ dan _plugins_ yang di-_support_ oleh _Codeclimate_ dapata dilihat pada [tautan ini](https://github.com/gilbarbara/codeclimate-stylelint).
 
-Setelah *dependencies* ter-*install* kita hanya perlu menambahkan *file*  `.stylelintrc` untuk menambahkan *default config* ke *stylelint*.  Berikut isi file `.stylelintrc`:
+Setelah _dependencies_ ter-_install_ kita hanya perlu menambahkan _file_ `.stylelintrc` untuk menambahkan _default config_ ke _stylelint_. Berikut isi file `.stylelintrc`:
 
 ```json
 {
-  "extends": [
-    "stylelint-config-standard"
-  ]
+  "extends": ["stylelint-config-standard"]
 }
 ```
 
-Jika akan menambahkan *config* yang tidak ada pada *stylelint* kita dapat menambahkan *config* tambahan di *fil* `.stylelintrc` untuk melihat apa saja *config* yang dapat ditambahkan dapat dilihat pada [tautan ini](https://stylelint.io/user-guide/rules/).
-Setelah itu kita dapat menambahkan *script* untuk menjalankan *stylelint* di *package.json*. Berikut adalah *script* yang perlu ditambahkan di file *package.json*.
+Jika akan menambahkan _config_ yang tidak ada pada _stylelint_ kita dapat menambahkan _config_ tambahan di _fil_ `.stylelintrc` untuk melihat apa saja _config_ yang dapat ditambahkan dapat dilihat pada [tautan ini](https://stylelint.io/user-guide/rules/).
+Setelah itu kita dapat menambahkan _script_ untuk menjalankan _stylelint_ di _package.json_. Berikut adalah _script_ yang perlu ditambahkan di file _package.json_.
 
 ```json
 "scripts": {
@@ -189,11 +178,11 @@ Setelah itu kita dapat menambahkan *script* untuk menjalankan *stylelint* di *pa
 }
 ```
 
-Disitu dibuat dua agar saat menjalankan lint `scss`  langsung fokus ke spesifik folder yang sudah didefinisikan di *script*. *Stylelint* juga *support* untuk melakukan *lint* *css*, *scss* di file `.vue`. 
+Disitu dibuat dua agar saat menjalankan lint `scss` langsung fokus ke spesifik folder yang sudah didefinisikan di _script_. _Stylelint_ juga _support_ untuk melakukan _lint_ _css_, _scss_ di file `.vue`.
 
 ## Bonus: Husky + Lint-Stage
 
-Adakalanya kita lupa untuk menjalankan *linter* disini akan menjelaskan bagaimana menjalankan *script linter* ketika kita melakukan *commit* di projek kita. Kita hanya perlu menambahkan *dependency* baru yaitu *lint-staged* dan *husky*. Untuk menambahkannya kita hanya perlu menjalankan *script* di bawah ini pada *terminal*.
+Adakalanya kita lupa untuk menjalankan _linter_ disini akan menjelaskan bagaimana menjalankan _script linter_ ketika kita melakukan _commit_ di projek kita. Kita hanya perlu menambahkan _dependency_ baru yaitu _lint-staged_ dan _husky_. Untuk menambahkannya kita hanya perlu menjalankan _script_ di bawah ini pada _terminal_.
 
 ```bash
 ### NPM
@@ -202,7 +191,7 @@ npm install -d lint-staged husky
 yarn add --dev lint-staged husky
 ```
 
-Setelah menambahkan *dependencies* tersebut kita dapat menambahkan konfigurasi untuk menjalankan *linter* sebelum *commit* pada file `package.json`. Berikut adalah hal yang perlu ditambahkan.
+Setelah menambahkan _dependencies_ tersebut kita dapat menambahkan konfigurasi untuk menjalankan _linter_ sebelum _commit_ pada file `package.json`. Berikut adalah hal yang perlu ditambahkan.
 
 ```json
 "lint-staged": {
@@ -223,5 +212,4 @@ Setelah menambahkan *dependencies* tersebut kita dapat menambahkan konfigurasi u
 }
 ```
 
-Di-*property* *lint-staged* dibedakan sesuai jenis file yang akan di-*commit*. Script akan dijalankan tergantung file yang di-*stage* di *git*.  Jika *file* `.vue` saja, maka hanya akan dijalankan linter khusus `*.{js,vue}` saja. Jika file *css* dan *vue* berubah maka akan menjalankan kedua *linter* tersebut sebelum melakukan *commit*. Jika ada yang gagal saat menjalankan *linter* maka file tidak akan ter-*commit*.
-
+Di-_property_ _lint-staged_ dibedakan sesuai jenis file yang akan di-_commit_. Script akan dijalankan tergantung file yang di-_stage_ di _git_. Jika _file_ `.vue` saja, maka hanya akan dijalankan linter khusus `*.{js,vue}` saja. Jika file _css_ dan _vue_ berubah maka akan menjalankan kedua _linter_ tersebut sebelum melakukan _commit_. Jika ada yang gagal saat menjalankan _linter_ maka file tidak akan ter-_commit_.
