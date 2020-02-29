@@ -91,7 +91,7 @@ class PostTemplate extends React.Component {
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
-          <SEO postPath={slug} postNode={postNode} postSEO />
+          <SEO postPath={slug} postNode={postNode} postSEO image={cover} />
 
           <SiteWrapper>
             <MainHeader className="post-head" cover={cover}>
