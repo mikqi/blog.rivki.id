@@ -6,7 +6,7 @@ import Navigation from '../components/Nav/Nav'
 class HomePage extends Component {
   componentDidMount() {
     // eslint-disable-next-line global-require
-    require('./typing')
+    require('../utils/typing')
     // eslint-disable-next-line no-undef
     runTextRotator()
   }
