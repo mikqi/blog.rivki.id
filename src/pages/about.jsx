@@ -16,6 +16,10 @@ class AboutPage extends Component {
             name="description"
             content="Hello, i'm Muhammad Rivki. A Front-End Engineer currently living in Jakarta, Indonesia. I focus on JavaScript stack and has performance in mind. I love to share knowledge to others."
           />
+          <meta
+            name="google-site-verification"
+            content="0EwAgA6z9K0d-KmQ103WbSwl6CvBLa1rj0Ghfc8rrMY"
+          />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property="og:type" content="website" />
