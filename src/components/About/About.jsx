@@ -15,7 +15,7 @@ class About extends Component {
           />
         </div>
 
-        <div>
+        <div className="poppins">
           {/* <!-- MAIN CONTENT ABOUT --> */}
           <div className="flex flex-column vh-100-l vh-100-m w-70-m w-60-l w-90-ns center justify-center items-center-l items-center-m">
             <div className="flex flex-column-ns flex-row-m flex-row-l mb4 mb4-l mb0-ns mt6-ns mt0-l mt0-m">

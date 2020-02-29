@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function() {
   return (
-    <section className="section w-break-ns">
+    <section className="section w-break-ns poppins">
       <div className="flex vh-100 w-60-l w-90-ns center justify-center items-center">
         <div className="vw-100">
           <p className="f2 fw1 mb4">Hello.</p>
