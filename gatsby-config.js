@@ -1,6 +1,6 @@
-const config = require("./data/SiteConfig");
+const config = require('./data/SiteConfig')
 
-const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -18,69 +18,90 @@ module.exports = {
     }
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`${__dirname}/src/components/layout.jsx`),
-      },
+        component: require.resolve(`${__dirname}/src/components/layout.jsx`)
+      }
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "posts",
+        name: 'posts',
         path: `${__dirname}/content/${config.blogPostDir}`
       }
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "authors",
+        name: 'authors',
         path: `${__dirname}/content/${config.blogAuthorDir}`
       }
     },
-    "gatsby-transformer-json",
+    'gatsby-transformer-json',
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 710,
               quality: 80,
               withWebp: true,
               sizeByPixelDensity: true,
-              showCaptions: true,
+              showCaptions: true
             }
           },
           {
-            resolve: "gatsby-remark-responsive-iframe"
+            resolve: 'gatsby-remark-responsive-iframe'
           },
-          "gatsby-remark-prismjs",
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers"
+          {
+            resolve: `gatsby-remark-vscode`,
+            // All options are optional. Defaults shown here.
+            options: {
+              theme: 'Dark+ (default dark)', // Read on for list of included themes. Also accepts object and function forms.
+              wrapperClassName: '', // Additional class put on 'pre' tag. Also accepts function to set the class dynamically.
+              injectStyles: true, // Injects (minimal) additional CSS for layout and scrolling
+              extensions: [], // Extensions to download from the marketplace to provide more languages and themes
+              // Absolute path to the directory where extensions will be downloaded. Defaults to inside node_modules.
+              // extensionDataDirectory: path.resolve('extensions'),
+              languageAliases: {}, // Map of custom/unknown language codes to standard/known language codes
+              replaceColor: x => x, // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
+              // getLineClassName: ({
+              //   // Function allowing dynamic setting of additional class names on individual lines
+              //   content, //   - the string content of the line
+              //   index, //   - the zero-based index of the line within the code fence
+              //   language, //   - the language specified for the code fence
+              //   meta //   - any options set on the code fence alongside the language (more on this later)
+              // }) => '',
+              logLevel: 'warn' // Set to 'info' to debug if something looks wrong
+            }
+          },
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-autolink-headers'
         ]
       }
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: config.googleAnalyticsID
       }
     },
     {
-      resolve: "gatsby-plugin-nprogress",
+      resolve: 'gatsby-plugin-nprogress',
       options: {
         color: config.themeColor
       }
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-twitter",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-twitter',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.siteTitle,
         short_name: config.siteTitle,
@@ -88,30 +109,30 @@ module.exports = {
         start_url: config.pathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
-        display: "standalone",
+        display: 'standalone',
         icons: [
           {
-            src: "/logos/logo-192x192.png",
-            sizes: "192x192",
-            type: "image/png"
+            src: '/logos/logo-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
           },
           {
-            src: "/logos/logo-512x512.png",
-            sizes: "512x512",
-            type: "image/png"
+            src: '/logos/logo-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
           }
         ]
       }
     },
-    "gatsby-plugin-offline",
+    'gatsby-plugin-offline',
     {
-      resolve: "gatsby-plugin-feed",
+      resolve: 'gatsby-plugin-feed',
       options: {
         setup(ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "Muhammad Rivki Blog";
-          return ret;
+          const ret = ref.query.site.siteMetadata.rssMetadata
+          ret.allMarkdownRemark = ref.query.allMarkdownRemark
+          ret.generator = 'Muhammad Rivki Blog'
+          return ret
         },
         query: `
         {
@@ -133,7 +154,7 @@ module.exports = {
         feeds: [
           {
             serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata;
+              const { rssMetadata } = ctx.query.site.siteMetadata
               return ctx.query.allMarkdownRemark.edges.map(edge => ({
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.frontmatter.date,
@@ -142,8 +163,8 @@ module.exports = {
                 author: rssMetadata.author,
                 url: rssMetadata.site_url + edge.node.fields.slug,
                 guid: rssMetadata.site_url + edge.node.fields.slug,
-                custom_elements: [{ "content:encoded": edge.node.html }]
-              }));
+                custom_elements: [{ 'content:encoded': edge.node.html }]
+              }))
             },
             query: `
             {
@@ -176,4 +197,4 @@ module.exports = {
       }
     }
   ]
-};
+}
