@@ -61,10 +61,10 @@ module.exports = {
             resolve: `gatsby-remark-vscode`,
             // All options are optional. Defaults shown here.
             options: {
-              theme: 'Dark+ (default dark)', // Read on for list of included themes. Also accepts object and function forms.
+              theme: 'One Dark Pro', // Read on for list of included themes. Also accepts object and function forms.
               wrapperClassName: '', // Additional class put on 'pre' tag. Also accepts function to set the class dynamically.
               injectStyles: true, // Injects (minimal) additional CSS for layout and scrolling
-              extensions: [], // Extensions to download from the marketplace to provide more languages and themes
+              extensions: ['material-theme'], // Extensions to download from the marketplace to provide more languages and themes
               // Absolute path to the directory where extensions will be downloaded. Defaults to inside node_modules.
               // extensionDataDirectory: path.resolve('extensions'),
               languageAliases: {}, // Map of custom/unknown language codes to standard/known language codes

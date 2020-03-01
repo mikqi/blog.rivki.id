@@ -172,7 +172,7 @@ Setelah itu kita dapat menambahkan _script_ untuk menjalankan _stylelint_ di _pa
 ```json
 "scripts": {
   //...
-	"lint:style": "stylelint 'assets/styles/***.scss' --fix",
+  "lint:style": "stylelint 'assets/styles/***.scss' --fix",
   "lint:vue": "stylelint '***.vue' --fix"
   //...
 }
@@ -195,7 +195,7 @@ Setelah menambahkan _dependencies_ tersebut kita dapat menambahkan konfigurasi u
 
 ```json
 "lint-staged": {
-	"*.{js,vue}": [
+  "*.{js,vue}": [
     "yarn lint:vue ",
     "yarn lint:script",
     "git add"

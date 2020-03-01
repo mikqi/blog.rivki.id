@@ -29,6 +29,7 @@
     "gatsby-transformer-json": "^2.1.4",
     "gatsby-transformer-remark": "^2.1.7",
     "lodash": "^4.17.11",
+    "material-theme": "Binaryify/OneDark-Pro",
     "moment": "^2.22.2",
     "prismjs": "^1.16.0",
     "react": "^16.5.2",
