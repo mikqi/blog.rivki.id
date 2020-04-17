@@ -2,16 +2,19 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* global window */
 import React, { useState } from 'react'
 import './SiteWrapper.css'
 
 function SiteWrapper(props) {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+  const [theme, setTheme] = useState(
+    window.localStorage.getItem('theme') || 'light'
+  )
   const { children } = props
 
   function toggleTheme() {
     const nextTheme = theme === 'light' ? 'dark' : 'light'
-    localStorage.setItem('theme', nextTheme)
+    window.localStorage.setItem('theme', nextTheme)
     setTheme(nextTheme)
   }
 
