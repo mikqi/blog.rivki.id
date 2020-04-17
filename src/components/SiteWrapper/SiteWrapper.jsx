@@ -7,8 +7,8 @@ import React, { useState } from 'react'
 import './SiteWrapper.css'
 
 function SiteWrapper(props) {
-  const storage = localStorage || {
-    getItem: (arg) => arg,
+  const storage = (typeof localStorage !== 'undefined' && localStorage) || {
+    getItem: () => 'light',
     setItem: (arg) => arg,
   }
   const [theme, setTheme] = useState(storage.getItem('theme') || 'light')
