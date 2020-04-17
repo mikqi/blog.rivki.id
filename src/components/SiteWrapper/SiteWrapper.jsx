@@ -4,18 +4,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react'
 import './SiteWrapper.css'
-import lightIcon from './light.svg'
-import darkIcon from './dark.svg'
 
 function SiteWrapper(props) {
-  const [theme, setTheme] = useState(
-    window.localStorage.getItem('theme') || 'light'
-  )
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
   const { children } = props
 
   function toggleTheme() {
     const nextTheme = theme === 'light' ? 'dark' : 'light'
-    window.localStorage.setItem('theme', nextTheme)
+    localStorage.setItem('theme', nextTheme)
     setTheme(nextTheme)
   }
 
