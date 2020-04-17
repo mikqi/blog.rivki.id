@@ -2,19 +2,21 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* global window */
+
 import React, { useState } from 'react'
 import './SiteWrapper.css'
 
 function SiteWrapper(props) {
-  const [theme, setTheme] = useState(
-    window.localStorage.getItem('theme') || 'light'
-  )
+  const storage = localStorage || {
+    getItem: (arg) => arg,
+    setItem: (arg) => arg,
+  }
+  const [theme, setTheme] = useState(storage.getItem('theme') || 'light')
   const { children } = props
 
   function toggleTheme() {
     const nextTheme = theme === 'light' ? 'dark' : 'light'
-    window.localStorage.setItem('theme', nextTheme)
+    storage.setItem('theme', nextTheme)
     setTheme(nextTheme)
   }
 
