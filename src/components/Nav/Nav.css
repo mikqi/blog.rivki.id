@@ -139,7 +139,6 @@ body {
 }
 
 .c-nav-trigger::before {
-  background-color: #1f1f1f;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -151,6 +150,16 @@ body {
   -webkit-transition-delay: 0.4s;
   -moz-transition-delay: 0.4s;
   transition-delay: 0.4s;
+}
+
+.light .c-nav-trigger::before {
+  background-color: #1f1f1f;
+  transition: all 0.5s ease;
+}
+
+.dark .c-nav-trigger::before {
+  background-color: #4f4f4f;
+  transition: all 0.5s ease;
 }
 
 .c-nav-trigger::after {

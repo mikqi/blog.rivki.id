@@ -9,16 +9,16 @@ export default function() {
           <p className="f2 fw1 mb4">Hello.</p>
           <h1 className="f1-m f1-l f2-ns ma0">I&apos;m Muhammad Rivki,</h1>
           <h2 className="f2-m f2-l f3-ns fw1 ma0 lh-copy">
-            Frontend Engineer at&nbsp;
-            <a
-              href="https://bukalapak.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bukalapak"
-              title="Bukalapak"
-            >
-              Bukalapak
-            </a>
+            Frontend Engineer&nbsp;
+            {/* <a
+                href="https://bukalapak.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bukalapak"
+                title="Bukalapak"
+              >
+                Bukalapak
+              </a> */}
           </h2>
           <h2 className="f2-m f2-l f3-ns fw1 ma0 lh-copy">
             who love&nbsp;

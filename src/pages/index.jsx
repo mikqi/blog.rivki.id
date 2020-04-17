@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import SiteWrapper from '../components/SiteWrapper/SiteWrapper'
 import Home from '../components/Home/Home'
 import Navigation from '../components/Nav/Nav'
 
@@ -56,8 +57,10 @@ class HomePage extends Component {
             content="https://this.rivki.id/images/meta-image.png"
           />
         </Helmet>
-        <Navigation />
-        <Home />
+        <SiteWrapper>
+          <Navigation />
+          <Home />
+        </SiteWrapper>
       </>
     )
   }

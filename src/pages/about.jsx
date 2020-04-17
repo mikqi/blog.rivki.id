@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import SiteWrapper from '../components/SiteWrapper/SiteWrapper'
 import About from '../components/About/About'
 import Navigation from '../components/Nav/Nav'
 
@@ -7,7 +8,6 @@ class AboutPage extends Component {
   render() {
     return (
       <>
-        <Navigation />
         <Helmet>
           {/* <!-- Primary Meta Tags --> */}
           <title>About | Muhammad Rivki - Frontend Engineer</title>
@@ -50,7 +50,10 @@ class AboutPage extends Component {
             content="https://this.rivki.id/images/meta-image.png"
           />
         </Helmet>
-        <About />
+        <SiteWrapper>
+          <About />
+          <Navigation />
+        </SiteWrapper>
       </>
     )
   }
