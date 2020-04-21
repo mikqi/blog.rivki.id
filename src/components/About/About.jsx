@@ -7,17 +7,16 @@ class About extends Component {
   render() {
     return (
       <>
-        <div className="scroll-indicator">
-          <img
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTYuMDAzIDE4LjYyNmw3LjA4MS03LjA4MUwyNSAxMy40NmwtOC45OTcgOC45OTgtOS4wMDMtOSAxLjkxNy0xLjkxNnoiLz48L3N2Zz4="
-            width="50"
-            alt="arrow-down"
-          />
-        </div>
-
         <div className="poppins">
           {/* <!-- MAIN CONTENT ABOUT --> */}
-          <div className="flex flex-column vh-100-l vh-100-m w-70-m w-60-l w-90-ns center justify-center items-center-l items-center-m">
+          <div className="flex flex-column vh-100-l vh-100-m w-70-m w-60-l w-90-ns center justify-center items-center-l items-center-m pos-relative">
+            <div className="scroll-indicator">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTYuMDAzIDE4LjYyNmw3LjA4MS03LjA4MUwyNSAxMy40NmwtOC45OTcgOC45OTgtOS4wMDMtOSAxLjkxNy0xLjkxNnoiLz48L3N2Zz4="
+                width="50"
+                alt="arrow-down"
+              />
+            </div>
             <div className="flex flex-column-ns flex-row-m flex-row-l mb4 mb4-l mb0-ns mt6-ns mt0-l mt0-m">
               <img
                 className="avatar self-center-ns"
@@ -35,8 +34,8 @@ class About extends Component {
               <p className="f4 gray fw1 tracked-sm lh-copy mt0 mt4-ns">
                 I am Rivki, but my friend sometimes call me Ikki (e&apos;ki). A
                 Frontend Engineer who love simplicity, great performance in the
-                good looking products that I made. Currently I am working at the
-                most growing e-commerce company in Indonesia,&nbsp;
+                good looking products that I made. Previously I am working at
+                the most growing e-commerce company in Indonesia,&nbsp;
                 <a
                   href="https://bukalapak.com/"
                   target="_blank"

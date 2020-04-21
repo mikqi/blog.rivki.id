@@ -25,9 +25,17 @@
   z-index: 999;
 }
 
+.pos-relative {
+  position: relative;
+}
+
 .center {
   margin-right: auto;
   margin-left: auto;
+}
+
+.dark .scroll-indicator {
+  filter: invert(1);
 }
 
 /* NS */
