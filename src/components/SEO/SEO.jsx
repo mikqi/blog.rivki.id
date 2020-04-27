@@ -32,11 +32,11 @@ class SEO extends Component {
         '@type': 'WebSite',
         url: blogURL,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : ''
-      }
+        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+      },
     ]
     if (postSEO) {
-      schemaOrgJSONLD.push([
+      schemaOrgJSONLD.push(
         {
           '@context': 'http://schema.org',
           '@type': 'BreadcrumbList',
@@ -47,10 +47,10 @@ class SEO extends Component {
               item: {
                 '@id': postURL,
                 name: title,
-                image
-              }
-            }
-          ]
+                image,
+              },
+            },
+          ],
         },
         {
           '@context': 'http://schema.org',
@@ -61,11 +61,11 @@ class SEO extends Component {
           headline: title,
           image: {
             '@type': 'ImageObject',
-            url: image
+            url: image,
           },
-          description
+          description,
         }
-      ])
+      )
     }
     return (
       <Helmet>

@@ -811,6 +811,12 @@ button {
     width: auto;
     margin: 2rem auto;
   }
+
+  .post-content img {
+    position: relative;
+    width: 110% !important;
+    left: -5% !important;
+  }
 }
 
 .post-content img {

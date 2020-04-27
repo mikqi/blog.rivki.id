@@ -65,6 +65,7 @@ Dan akan muncul seperti ini di *terminal/command line* kamu.
 Lalu kamu bisa mengakses halaman web-nya ke http://localhost:3000/
 
 ![Results](/images/posts/node-create-web-server/result.png)
+*Hasil*
 
 ## Summary
 
@@ -73,4 +74,4 @@ Lalu kamu bisa mengakses halaman web-nya ke http://localhost:3000/
 #### Credits
 
 - https://nodejs.org/api/http.html
-- Photo by Jonathan on Unsplash
+- Photo by [Jonathan](https://unsplash.com/@isodme) on [Unsplash](https://unsplash.com/)
