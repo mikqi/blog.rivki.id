@@ -1,11 +1,12 @@
 ---
-title: 'Cara Install NodeJS'
+title: 'Belajar NodeJS: Cara Install NodeJS di Windows, MacOS, Linux Ubuntu'
 cover: '/images/posts/install-nodejs/cover.jpg'
 author: 'mikqi'
 date: '2020-04-21'
-category: 'Javascript'
+category: 'Backend'
 tags:
   - Javascript
+  - NodeJS
 ---
 
 <!-- WHAT + When + Intro + Latar Belakang masalah -->
