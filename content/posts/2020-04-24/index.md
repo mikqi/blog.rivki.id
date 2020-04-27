@@ -1,6 +1,6 @@
 ---
-title: "Basic NodeJS: Membuat Web Server Sendiri Menggunakan NodeJS"
-cover: ""
+title: "Belajar NodeJS: Membuat Web Server Sendiri Menggunakan NodeJS"
+cover: "/images/posts/node-create-web-server/cover.jpg"
 author: "mikqi"
 date: "2020-04-24"
 category: "Backend"
@@ -73,3 +73,4 @@ Lalu kamu bisa mengakses halaman web-nya ke http://localhost:3000/
 #### Credits
 
 - https://nodejs.org/api/http.html
+- Photo by Jonathan on Unsplash
