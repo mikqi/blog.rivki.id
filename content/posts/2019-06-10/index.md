@@ -3,9 +3,9 @@ title: 'Kegunaan dan Seberapa Penting Sih .lock File'
 cover: '/images/posts/lockfiles/cover.jpg'
 author: 'mikqi'
 date: '2019-06-10'
-category: 'javascript'
+category: 'Javascript'
 tags:
-  - javascript
+  - Javascript
 ---
 
 Jika kalian pernah menggunakan _package manaager_ seperti [npm](https://npmjs.org/) atau [yarn](https://yarnpkg.org) pasti sudah gak asing lagi dengan file yang di-_auto generate_ oleh _package manager_ tersebut, `package-lock.json` di-_generate_ oleh _npm_ dan `yarn.lock` di-_generate_ oleh _yarn_.

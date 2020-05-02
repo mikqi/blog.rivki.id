@@ -3,9 +3,9 @@ title: "Upgraded from Hexo to Gatsby v2"
 cover: "/images/posts/baby-finish.jpg"
 author: "mikqi"
 date: "2019-01-01"
-category: "experience"
+category: "Experience"
 tags:
-    - experience
+    - Experience
 ---
 
 Ini adalah post pertama saya di blog personal saya dan di blog ini saya menggunakan teknologi atau stak yang lain lagi. Sebelumnya saya membuat blog di domain ini menggunakan [**Hexo**](https://hexo.io/) namun sekarang saya mencoba untuk mengganti menggunakan teknologi yang lain. Semoga yang stack teknologi yang saya gunakan cocok dengan saya.
@@ -40,7 +40,7 @@ Menurut saya cara instalassi dan konfigurasi oleh *Hubpress* tidaklah sulit namu
 
 ### Hexo
 
-Selanjutnya saya mencoba [Hexo.io](https://hexo.io/), framework yang fokus untuk membuat blog menggunakan stack node.js dkk. Hexo tergolong mudah dipelajari dan sesuai kebutuhan saya yang sedang belajar node.js pada waktu itu. 
+Selanjutnya saya mencoba [Hexo.io](https://hexo.io/), framework yang fokus untuk membuat blog menggunakan stack node.js dkk. Hexo tergolong mudah dipelajari dan sesuai kebutuhan saya yang sedang belajar node.js pada waktu itu.
 
 ![Gatsby](https://www.gatsbyjs.org/static/gatsby-icon-4a9773549091c227cd2eb82ccd9c5e3a.png#forty-percent)
 *Gatsby Logo*

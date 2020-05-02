@@ -16,7 +16,7 @@ tags:
 
 ## Contoh Routing di Website
 
-![http request illustration](images/posts/basic-routing/request.png)
+![http request illustration](/images/posts/basic-routing/request.png)
 *Illustrasi HTTP Request*
 
 Illustrasi di atas menggambarkan bagaimana komunikasi *client - server* bekerja. Illustrasi di atas juga bisa menggambarkan bagaimana *routing* bekerja. Misal kita punya website 2 halaman atau biasanya saya sering menyebutnya *2 route* yaitu "/home" dan "/about". Nah, ketika kita mengetikan "example.com/home" di-url browser kita, maka alur yang berjalan mirip dengan ilustrasi yang di atas. Jika kita jadikan poin maka akan seperti di bawah ini alur-nya.
@@ -58,7 +58,7 @@ console.log(request.url)
 
 Setelah itu kita coba jalankan di browser dan coba kamu ubah url setelah "localhost:3000/" dengan apapun maka akan memunculkan log seperti di bawah ini.
 
-![sample request](images/posts/basic-routing/sample-request.png#forty-percent)
+![sample request](/images/posts/basic-routing/sample-request.png#forty-percent)
 *Log Request*
 
 Bisa kita lihat, semua request yang dilakukan browser masuk semua ke *parameter request*. Jika dilihat dari screenshot di atas `request.url` menampilkan request path yang dilakukan browser secara detail.
@@ -100,7 +100,7 @@ switch(path) {
 
 Jika sudah ditambahkan di *code* sebelumnya terus coba dijalankan ulang `node helloworld.js` terus kamu coba ke halaman "/" seharusnya aka muncul tulisan "Homepage" di browser, lalu ketika ubah url browser ke halaman "/about" maka akan muncul tulisan "About Page" tapi ketika kamu coba asal-asal ke url yang tidak di define di atas, maka akan di *redirect* ke halaman "/404" dengan konten "Not Found".
 
-![demo](images/posts/basic-routing/demo.gif)
+![demo](/images/posts/basic-routing/demo.gif)
 *Demo*
 
 Jika kita membuat aplikasi yang cukup besar, tidak mungkin kita hanya menggunakan NodeJS saja. Bayangkan saja jika kita memiliki 100 route, maka kita akan membuat 100 * 4 line untuk simple response. Tapi tidak mungkin juga kita hanya memunculkan hal simple, pasti ada logic yang complex di setiap route.
