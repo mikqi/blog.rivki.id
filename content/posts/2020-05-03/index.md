@@ -1,26 +1,26 @@
 ---
-title: "Best 5 Chrome Extension Untuk GitHub"
+title: 'Best 5 Chrome Extension Untuk GitHub'
 cover: '/images/posts/github-chrome-ext/cover.jpeg'
-author: "mikqi"
-date: "2020-05-03"
-category: "Tools"
+author: 'mikqi'
+date: '2020-05-03'
+category: 'Tools'
 tags:
-    - Tools
-    - Experience
+  - Tools
+  - Experience
 ---
 
-Di artikel ini saya akan share tentang *Chrome Extensions Tools* pada GitHub yang saya gunakan agar menambah produktivitas saya dalam menggunakan GitHub sehari-hari. Sebenarnya banyak sekali extension yang bagus di luar sana, tapi dalam case saya dan saya akan *sharing* 5 Chrome Extension Github yang saya gunakan.
+Di artikel ini saya akan share tentang _Chrome Extensions Tools_ pada GitHub yang saya gunakan agar menambah produktivitas saya dalam menggunakan GitHub sehari-hari. Sebenarnya banyak sekali extension yang bagus di luar sana, tapi dalam case saya dan saya akan _sharing_ 5 Chrome Extension Github yang saya gunakan.
 
 ## [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en)
 
 ![Octotree](/images/posts/github-chrome-ext/octotree.gif)
 
-Extension ini sangat membantu sekali buat saya. Khususnya untuk browse file dan folder karena disediakan tree, jadi kita bisa lebih cepat melihat-lihat isi dari repo itu, khususnya jika kita sedang melihat-lihat projek *open source*.
+Extension ini sangat membantu sekali buat saya. Khususnya untuk browse file dan folder karena disediakan tree, jadi kita bisa lebih cepat melihat-lihat isi dari repo itu, khususnya jika kita sedang melihat-lihat projek _open source_.
 
 ![Pull Request](/images/posts/github-chrome-ext/pull-request.png)
-*Pull Request with Octotree*
+_Pull Request with Octotree_
 
-Dan extension ini juga mempermudah saya dalam melakukan *code review* di pull request (PR), karena at first glance kita bisa tau apa aja sih file yang diubah di PR tersebut dan keliatan jumlah line yang berubah atau ditambahkan. Kita juga bisa lihat apa saja yang di review oleh engineer lain. Kamu perlu login jika ingin mendapatkan *feature* ini, jika tidak login hanya bisa melihat semua file repo, tidak spesifik PR.
+Dan extension ini juga mempermudah saya dalam melakukan _code review_ di pull request (PR), karena at first glance kita bisa tau apa aja sih file yang diubah di PR tersebut dan keliatan jumlah line yang berubah atau ditambahkan. Kita juga bisa lihat apa saja yang di review oleh engineer lain. Kamu perlu login jika ingin mendapatkan _feature_ ini, jika tidak login hanya bisa melihat semua file repo, tidak spesifik PR.
 
 ## [Refined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
 
@@ -30,7 +30,7 @@ Extension yang satu ini membuat tampilan serta flow menggunakan GitHub kita lebi
 
 Terus emoji, jika sebelumnya GitHub hanya memunculkan emoji saja tapi tidak siapa saja yang menambahkan emoji tersebut di comment kita. Jika kamu menggunakan extension ini kamu bisa tau siapa saja yang menambahkan emoji tersebut di comment kamu. Simple, tapi menarik.
 
-Yang gak kalah penting, jika di *repository* kamu memiliki Continuous Integration(CI) dan wajib lolos CI dulu sebelum merge. Extension ini memberikan opsi ketika ingin melakukan merge branch menunggu semua CI lolos baru ter-merge. Ini sangat membantu buat saya, karena alur saya masih manual untuk merge branch.
+Yang gak kalah penting, jika di _repository_ kamu memiliki Continuous Integration(CI) dan wajib lolos CI dulu sebelum merge. Extension ini memberikan opsi ketika ingin melakukan merge branch menunggu semua CI lolos baru ter-merge. Ini sangat membantu buat saya, karena alur saya masih manual untuk merge branch.
 
 ## [Octolinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp/related?hl=en)
 
@@ -57,6 +57,7 @@ Yang terakhir adalah dark mode untuk GitHub. Ini penting untuk saya, karena mata
 Ya seperti itu setup chrome extension GitHub saya agar lebih produktif. Ini semua tergantung preferensi orang masing-masing, tidak semuanya sama.
 
 ## Credits
+
 - Photo by [Artem Sapegin](https://unsplash.com/@sapegin) on [Unsplash](https://unsplash.com/)
 - Octotree - https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en
 - Refined GitHub - https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en

@@ -1,19 +1,19 @@
 ---
-title: "Kenalan dengan ESLint, Linter Javascript"
-cover: "/images/posts/intro-eslint/cover.png"
-author: "mikqi"
-date: "2020-05-02"
-category: "Tools"
+title: 'Kenalan dengan ESLint, Linter Javascript'
+cover: '/images/posts/intro-eslint/cover.png'
+author: 'mikqi'
+date: '2020-05-02'
+category: 'Tools'
 tags:
-    - Tools
-    - Javascript
+  - Tools
+  - Javascript
 ---
 
 > Lint atau linter adalah alat untuk menganalisa source code untuk menandai errors, bug, code convention dan memverifikasi kualitas kode.
 
-Di artikel kali ini saya akan menjelaskan salah satu *tools* atau *module* yang sangat membantu kita dalam mengerjakan sebuah projek yaitu [ESLint](https://eslint.org/) salah satu linter JavaScript yang terkenal.
+Di artikel kali ini saya akan menjelaskan salah satu _tools_ atau _module_ yang sangat membantu kita dalam mengerjakan sebuah projek yaitu [ESLint](https://eslint.org/) salah satu linter JavaScript yang terkenal.
 
-Jika kamu belum tau apa itu [ESLint](https://eslint.org/), [ESLint](https://eslint.org/) adalah sebuah tools untuk melakukan *static analyzes* kode kita agar kita tau dengan cepat menemukan masalah atau potensi *bug* dari kode yang sudah kita buat.
+Jika kamu belum tau apa itu [ESLint](https://eslint.org/), [ESLint](https://eslint.org/) adalah sebuah tools untuk melakukan _static analyzes_ kode kita agar kita tau dengan cepat menemukan masalah atau potensi _bug_ dari kode yang sudah kita buat.
 
 ## Kenapa Harus Pasang Linter
 
@@ -21,24 +21,24 @@ Jika kamu belum tau apa itu [ESLint](https://eslint.org/), [ESLint](https://esli
 
 ## Find Problems
 
-[ESLint](https://eslint.org/) secara otomatis menganalisa kode kita apakah memiliki potensi bug, sesuai standar/konvesi yang sudah di define di konfigurasi [ESLint](https://eslint.org/) atau tidak. Keuntungannya disini kita cepat mendapatkan feedback loop yang diberikan oleh [ESLint](https://eslint.org/), kita tidak harus mengecek dulu kode kita sudah sesuai best practice belum atau adakah di kode kita ini yang akan berpotensi memunculkan bug kedepannya. Dan kita langsung diberitahu potensial error atau warning oleh [ESLint](https://eslint.org/) jika *code editor* kita support.
+[ESLint](https://eslint.org/) secara otomatis menganalisa kode kita apakah memiliki potensi bug, sesuai standar/konvesi yang sudah di define di konfigurasi [ESLint](https://eslint.org/) atau tidak. Keuntungannya disini kita cepat mendapatkan feedback loop yang diberikan oleh [ESLint](https://eslint.org/), kita tidak harus mengecek dulu kode kita sudah sesuai best practice belum atau adakah di kode kita ini yang akan berpotensi memunculkan bug kedepannya. Dan kita langsung diberitahu potensial error atau warning oleh [ESLint](https://eslint.org/) jika _code editor_ kita support.
 
 ![Warning & Error](/images/posts/code-quality-linter/cover.jpg)
-*Sample Warning & Error [ESLint](https://eslint.org/)*
+_Sample Warning & Error [ESLint](https://eslint.org/)_
 
 ## Fix Automatically
 
 Selain menganalisa dan memverifikasi kode kita apakah sudah sesuai dengan konvesi atau tidak memiliki potensi bug, fitur yang keren lainnya adalah [ESLint](https://eslint.org/) dapat membenarkan kode kita jika ada yang salah. Jika di VSCode akan ada icon lampu 💡, jika kita klik akan muncul sugesti untuk fix-nya seperti apa.
 
 ![Fix Automatically](/images/posts/intro-eslint/fix-ts.gif)
-*Suggest & Fix*
+_Suggest & Fix_
 
 ## Customize
 
-Dengan [ESLint](https://eslint.org/) juga kita bisa mengkustomisasi konfigurasi, *parser* dan rules yang akan digabungkan dengan rules built-in dari [ESLint](https://eslint.org/) sesuai kebutuhan projek kita. [ESLint](https://eslint.org/) jgua sekarang sudah support dengan Typescript, jadi jika kamu ingin mencari linter untuk Typescript, tinggal gunakan saja [ESLint](https://eslint.org/). Dukungan komunitas untuk [ESLint](https://eslint.org/) juga banyak sekali, jadi kamu tidak usah bingung jika ingin menggabungkan React + [ESLint](https://eslint.org/) atau Vue + [ESLint](https://eslint.org/) kamu bisa [mencari plugin-nya disini](https://www.npmjs.com/search?q=keywords:eslint-plugin). Terdapat sekali banyak dukungan, kamu hanya tinggal mencarinya di [NPM](https://www.npmjs.com/).
+Dengan [ESLint](https://eslint.org/) juga kita bisa mengkustomisasi konfigurasi, _parser_ dan rules yang akan digabungkan dengan rules built-in dari [ESLint](https://eslint.org/) sesuai kebutuhan projek kita. [ESLint](https://eslint.org/) jgua sekarang sudah support dengan Typescript, jadi jika kamu ingin mencari linter untuk Typescript, tinggal gunakan saja [ESLint](https://eslint.org/). Dukungan komunitas untuk [ESLint](https://eslint.org/) juga banyak sekali, jadi kamu tidak usah bingung jika ingin menggabungkan React + [ESLint](https://eslint.org/) atau Vue + [ESLint](https://eslint.org/) kamu bisa [mencari plugin-nya disini](https://www.npmjs.com/search?q=keywords:eslint-plugin). Terdapat sekali banyak dukungan, kamu hanya tinggal mencarinya di [NPM](https://www.npmjs.com/).
 
 ![Typescript Support](/images/posts/intro-eslint/typescript-support.png)
-*Typescript Support*
+_Typescript Support_
 
 ## Integrasi Ke Projek
 
@@ -83,19 +83,19 @@ Lalu kita akan dibuatkan files `.eslintrc.js`. Contoh isi file-nya seperti di ba
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
   },
   extends: 'eslint:recommended',
   parserOptions: {
     ecmaVersion: 2015,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   rules: {
     indent: ['error', 4],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
-    semi: ['error', 'never']
-  }
+    semi: ['error', 'never'],
+  },
 }
 ```
 
