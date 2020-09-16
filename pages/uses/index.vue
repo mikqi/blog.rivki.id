@@ -1,9 +1,9 @@
 <template>
-  <h1>Hello</h1>
+  <h1>Uses Page</h1>
 </template>
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'UsesPage',
 }
 </script>
