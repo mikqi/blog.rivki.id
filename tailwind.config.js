@@ -138,5 +138,8 @@ module.exports = {
     borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
     textColor: ['dark', 'dark-hover', 'dark-active'],
   },
-  plugins: [require('tailwindcss-dark-mode')()],
+  plugins: [
+    require('tailwindcss-dark-mode')(),
+    require('@tailwindcss/typography'),
+  ],
 }

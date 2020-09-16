@@ -5,3 +5,71 @@
 .dark-mode body {
   @apply bg-gray-800 text-white;
 }
+
+.dark-mode .prose {
+  @apply text-gray-300;
+}
+
+.dark-mode .prose [class~='lead'] {
+  @apply text-gray-400;
+}
+
+.dark-mode .prose blockquote {
+  @apply text-gray-300;
+  @apply border-gray-700;
+
+  border-top-color: unset;
+  border-right-color: unset;
+  border-bottom-color: unset;
+}
+
+.dark-mode .prose hr {
+  @apply border-gray-800;
+
+  border-right-color: unset;
+  border-bottom-color: unset;
+  border-left-color: unset;
+}
+
+.dark-mode .prose strong {
+  @apply text-white;
+}
+
+.dark-mode .prose figure figcaption {
+  @apply text-gray-500;
+}
+
+.dark-mode .prose a {
+  @apply text-white;
+}
+
+.dark-mode .prose th {
+  @apply text-white;
+}
+
+.dark-mode .prose h1,
+.dark-mode .prose h2,
+.dark-mode .prose h3,
+.dark-mode .prose h4 {
+  color: white;
+}
+
+.dark-mode .prose code {
+  @apply text-gray-300;
+}
+
+.dark-mode .prose::before {
+  @apply text-gray-300;
+}
+
+.dark-mode .prose::after {
+  @apply text-gray-300;
+}
+
+.dark-mode .prose ol > li::before {
+  @apply text-gray-400;
+}
+
+.dark-mode .prose ul > li::before {
+  @apply text-gray-600;
+}
