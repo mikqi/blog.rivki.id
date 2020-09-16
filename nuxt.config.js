@@ -50,6 +50,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    // Doc: https://github.com/nuxt-community/color-mode-module
+    '@nuxtjs/color-mode',
   ],
   /*
    ** Nuxt.js modules
@@ -68,4 +70,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  purgeCSS: {
+    whitelist: ['dark-mode'],
+  },
 }
