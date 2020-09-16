@@ -26,6 +26,7 @@
     "@nuxtjs/color-mode": "^1.1.1",
     "@tailwindcss/typography": "^0.2.0",
     "nuxt": "^2.14.0",
+    "prism-themes": "^1.4.0",
     "tailwindcss-dark-mode": "^1.1.6"
   },
   "devDependencies": {
