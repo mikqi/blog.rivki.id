@@ -14,13 +14,14 @@
           class="md:flex justify-between mb-3"
         >
           <h3 :key="year + idx">
-            <a
-              :href="article.path"
+            <nuxt-link
+              tag="a"
+              :to="article.path"
               :aria-label="article.title"
               class="font-semibold no-underline hover:underline"
             >
               {{ article.title }}
-            </a>
+            </nuxt-link>
           </h3>
           <div>{{ article.date }}</div>
         </div>
