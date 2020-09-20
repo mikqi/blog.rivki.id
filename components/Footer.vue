@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-200 py-8 footer" lang="en">
+  <footer class="bg-gray-200 py-8 px-6 footer" lang="en">
     <div class="mx-auto max-w-2xl">
       <p class="font-sans text-sm mb-8">
         © {{ currentYear }} Muhammad Rivki. All rights reserved.

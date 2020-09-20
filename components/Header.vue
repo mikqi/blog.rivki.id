@@ -19,14 +19,22 @@
             {{ menu.label }}
           </nuxt-link>
         </li>
+        <li class="relative" style="width: 36px">
+          <ToggleTheme class="toggle-theme" />
+        </li>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
+import ToggleTheme from './ToggleTheme'
+
 export default {
   name: 'Header',
+  components: {
+    ToggleTheme,
+  },
   computed: {
     listMenus() {
       const menus = [
@@ -72,5 +80,11 @@ export default {
 
 .dark-mode .nav.nuxt-link-active {
   @apply bg-gray-700;
+}
+
+.toggle-theme {
+  position: absolute;
+  top: -5px;
+  left: -5px;
 }
 </style>
