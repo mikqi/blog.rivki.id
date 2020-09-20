@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/mikqi/blog.rivki.id)
+
 # new-blog-v2
 
 ## Build Setup
