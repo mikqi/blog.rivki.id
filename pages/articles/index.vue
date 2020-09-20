@@ -6,21 +6,24 @@
       Articles
     </h1>
     <div>
-      <article
-        v-for="(article, idx) in articles"
-        :key="idx"
-        class="md:flex justify-between mb-3"
-      >
-        <h3>
-          <a
-            :href="article.path"
-            :aria-label="article.title"
-            class="font-semibold no-underline hover:underline"
-          >
-            {{ article.title }}
-          </a>
-        </h3>
-        <div>{{ article.date }}</div>
+      <article v-for="year in years" :key="year">
+        <h3 class="mb-4 mt-10 text-2xl font-bold">{{ year }}</h3>
+        <div
+          v-for="(article, idx) in articlesGrouped[year]"
+          :key="year + idx"
+          class="md:flex justify-between mb-3"
+        >
+          <h3 :key="year + idx">
+            <a
+              :href="article.path"
+              :aria-label="article.title"
+              class="font-semibold no-underline hover:underline"
+            >
+              {{ article.title }}
+            </a>
+          </h3>
+          <div>{{ article.date }}</div>
+        </div>
       </article>
     </div>
   </main>
@@ -30,13 +33,25 @@
 export default {
   name: 'ArticlesPage',
   async asyncData({ $content }) {
-    const articles = await $content('articles')
+    const articlesData = await $content('articles')
       .sortBy('date', 'desc')
       .only(['date', 'path', 'title', 'tags', 'category'])
       .fetch()
 
+    const articlesGrouped = {}
+    // GROUP ARTICLE BY YEAR
+    articlesData.forEach((article) => {
+      const year = article.date.substr(0, 4)
+      if (Object.keys(articlesGrouped).includes(year)) {
+        articlesGrouped[year].push(article)
+      } else {
+        articlesGrouped[year] = [article]
+      }
+    })
+
     return {
-      articles,
+      articlesGrouped,
+      years: Object.keys(articlesGrouped).reverse(),
     }
   },
 }
