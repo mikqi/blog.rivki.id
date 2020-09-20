@@ -8,9 +8,9 @@
 <script>
 export default {
   name: 'ToggleTheme',
-  mounted() {
-    const currentColor = this.$colorMode.value
-    this.$refs.toggle.checked = currentColor === 'dark'
+  async mounted() {
+    await this.$nextTick()
+    this.$refs.toggle.checked = this.$colorMode.value === 'dark'
   },
   methods: {
     toggleTheme(e) {
