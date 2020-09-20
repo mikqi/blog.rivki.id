@@ -1,26 +1,23 @@
 <template>
-  <header class="bg-gray-900 mb-8">
+  <header class="mb-8">
     <nav
-      class="flex flex-col sm:flex-row justify-between py-8 md:px-0 sm:px-6 container max-w-2xl mx-auto"
+      class="flex flex-col sm:flex-row justify-between py-4 md:px-0 px-6 container max-w-2xl mx-auto"
       role="navigation"
     >
-      <div class="sm:self-center">
-        <nuxt-link
-          to="/"
-          class="text-lg no-underline font-semibold rounded transition-colors text-white duration-300"
-        >
+      <div class="self-center">
+        <nuxt-link to="/" class="text-lg no-underline font-semibold">
           Rivki, Muhammad
         </nuxt-link>
       </div>
-      <ul class="flex mt-2 sm:mt-0 space-x-4 sm:self-center">
+      <ul class="flex mt-2 sm:mt-0 space-x-4 self-center">
         <li v-for="menu in listMenus" :key="menu.name">
           <nuxt-link
-            class="duration-300 hover:bg-gray-800 hover:text-white text-white px-2 py-1 rounded transition-colors"
-            :class="{ 'menu-active': menu.name === $nuxt.$route.name }"
+            class="duration-300 rounded no-underline bg-transparent nav px-2 py-1"
             :to="menu.path"
             tag="a"
-            >{{ menu.label }}</nuxt-link
           >
+            {{ menu.label }}
+          </nuxt-link>
         </li>
       </ul>
     </nav>
@@ -61,7 +58,19 @@ export default {
 </script>
 
 <style scoped>
-.menu-active {
-  @apply bg-gray-800 px-2 py-1 rounded text-white;
+.nav:hover {
+  @apply bg-gray-200;
+}
+
+.dark-mode .nav:hover {
+  @apply bg-gray-700;
+}
+
+.nav.nuxt-link-active {
+  @apply bg-gray-200;
+}
+
+.dark-mode .nav.nuxt-link-active {
+  @apply bg-gray-700;
 }
 </style>
