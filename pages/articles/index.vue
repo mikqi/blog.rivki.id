@@ -23,7 +23,7 @@
               {{ article.title }}
             </nuxt-link>
           </h3>
-          <div>{{ article.date }}</div>
+          <div>{{ date(article.date) }}</div>
         </div>
       </article>
     </div>
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import dayjs from 'dayjs'
+
 export default {
   name: 'ArticlesPage',
   async asyncData({ $content }) {
@@ -54,6 +56,11 @@ export default {
       articlesGrouped,
       years: Object.keys(articlesGrouped).reverse(),
     }
+  },
+  methods: {
+    date(val, locale = 'id') {
+      return dayjs(val).locale(locale).format('MMM DD')
+    },
   },
 }
 </script>
