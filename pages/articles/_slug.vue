@@ -11,7 +11,7 @@
             alt="Kutty"
           />
           <p class="mt-6 mb-2 uppercase tracking-wider font-semibold text-xs">
-            {{ article.category }}
+            {{ date(article.date) }}
           </p>
           <h1
             class="text-3xl md:text-4xl leading-tight mb-3 title"
@@ -43,7 +43,7 @@
       >
         <div class="flex justify-center items-center w-full h-full flex-col">
           <span class="badge z-10 mb-2">Read Prev</span>
-          <span class="z-10">{{ prev.title }}</span>
+          <span class="z-10 text-white">{{ prev.title }}</span>
           <div
             class="w-full h-full bg-gray-900 opacity-75 hover:bg-black absolute"
           />
@@ -58,7 +58,7 @@
       >
         <div class="flex justify-center items-center w-full h-full flex-col">
           <span class="badge z-10 mb-2">Read Next</span>
-          <span class="z-10">{{ next.title }}</span>
+          <span class="z-10 text-white">{{ next.title }}</span>
           <div
             class="w-full h-full bg-gray-900 opacity-75 hover:bg-black absolute"
           />
@@ -69,6 +69,8 @@
 </template>
 
 <script>
+import dayjs from 'dayjs'
+
 export default {
   name: 'ArticleDetail',
   layout: 'empty',
@@ -85,6 +87,11 @@ export default {
       prev,
       next,
     }
+  },
+  methods: {
+    date(val, locale = 'id') {
+      return dayjs(val).locale(locale).format('MMMM, DD YYYY')
+    },
   },
 }
 </script>
