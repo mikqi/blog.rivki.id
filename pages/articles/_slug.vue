@@ -70,6 +70,7 @@
 
 <script>
 import dayjs from 'dayjs'
+import { generateSEO } from '@/utils/seo'
 
 export default {
   name: 'ArticleDetail',
@@ -93,13 +94,33 @@ export default {
       return dayjs(val).locale(locale).format('MMMM, DD YYYY')
     },
   },
+  head() {
+    return generateSEO({ ...this.article })
+  },
 }
 </script>
 
-<style scoped>
+<style>
 .prose {
   overflow-wrap: anywhere;
 }
+
+.prose .twitter-tweet {
+  margin: auto !important;
+  margin-bottom: 2rem !important;
+}
+
+.prose img {
+  width: 100%;
+}
+
+.prose p > img + em {
+  display: flex;
+  margin-top: -36px;
+  justify-content: center;
+  font-size: 1rem;
+}
+
 .badge,
 .prose a.badge {
   @apply text-center no-underline font-semibold relative;
