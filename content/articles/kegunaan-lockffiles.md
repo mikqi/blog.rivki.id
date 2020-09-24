@@ -66,11 +66,11 @@ Ya seperti yang dijelaskan di atas, untuk mengurangi missmatch package dari komp
 
 ---
 
-## TLDR;
+## TLDR
 
 > Lockfile sangat penting ketika kita ngodingnya gak sendiri dan itu untuk menghindari missmatch dari versi _dependency_ yang memungkinkan projek gak jalan ketika ada versi _dependency_ yang berbeda. Jadi wajib banget untuk dimasukkan ke _commit_.
 
-#### Credits
+### Credits
 
-- https://unsplash.com/@mmayyer
-- https://jpospisil.com/2017/06/02/understanding-lock-files-in-npm-5.html
+- <https://unsplash.com/@mmayyer>
+- <https://jpospisil.com/2017/06/02/understanding-lock-files-in-npm-5.html>
