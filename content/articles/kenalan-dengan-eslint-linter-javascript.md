@@ -145,6 +145,6 @@ Untuk flag `--ext` untuk mem-_filter_ _file_ dengan _extension_ apa saja yang ak
 
 ## Credits
 
-- https://eslint.org
-- https://github.com/mikqi/express-awesome-boilerplate
-- https://www.npmjs.com/search?q=keywords:eslint-plugin
+- <https://eslint.org>
+- <https://github.com/mikqi/express-awesome-boilerplate>
+- <https://www.npmjs.com/search?q=keywords:eslint-plugin>
