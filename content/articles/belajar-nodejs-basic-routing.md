@@ -149,7 +149,7 @@ server.listen(port, () => {
 
 > Konsep ini juga yang digunakan untuk membuat RESTful API kedepannya.
 
-#### Credits
+### Credits
 
 - Photo by [Javier Allegue Barros](https://unsplash.com/@soymeraki) on [Unsplash](https://unsplash.com/)
-- Illustration - https://filipmolcik.com/
+- Illustration - <https://filipmolcik.com/>
