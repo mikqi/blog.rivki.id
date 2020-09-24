@@ -55,7 +55,7 @@ _Network Tab_
 Jika kamu menggunakan VSCode, bisa gunakan _shortcut_ `` cmd | ctrl + ` `` untuk memunculkan terminal di VSCode. Jika tidak dari VSCode, pastikan terminal kamu sudah berada di _folder_ yang benar. Setelah itu kita bisa jalankan file tersebut dengan mengetikan _command_ berikut.
 
 ```bash
-$ node helloworld.js
+node helloworld.js
 ```
 
 Dan akan muncul seperti ini di _terminal/command line_ kamu.
@@ -71,7 +71,7 @@ _Hasil_
 
 > Ya jadi kali ini kita belajar bagaimana membuat Web Server sendiri dengan menggunakan NodeJS hanya mengandalkan module 'http' bawaan dari NodeJS saja. Kedepannya kita akan memperluas _knowledge_ kita tidak berhenti di sini saja. Next-nya saya akan menambahkan _routing_ hanya menggunakan NodeJS. Jadi kamu harus memperkuat fondasi dulu dari belajar yang benar-benar basic terelbih dulu. Kita tidak langsung terjun menggunakan framework.
 
-#### Credits
+### Credits
 
-- https://nodejs.org/api/http.html
+- <https://nodejs.org/api/http.html>
 - Photo by [Jonathan](https://unsplash.com/@isodme) on [Unsplash](https://unsplash.com/)
