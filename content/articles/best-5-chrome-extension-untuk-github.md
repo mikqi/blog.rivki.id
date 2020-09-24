@@ -59,8 +59,8 @@ Ya seperti itu setup chrome extension GitHub saya agar lebih produktif. Ini semu
 ## Credits
 
 - Photo by [Artem Sapegin](https://unsplash.com/@sapegin) on [Unsplash](https://unsplash.com/)
-- Octotree - https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en
-- Refined GitHub - https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en
-- Octolinker - https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp/related?hl=en
-- File Icon for GitHub - https://chrome.google.com/webstore/detail/file-icon-for-github-and/ficfmibkjjnpogdcfhfokmihanoldbfe/related?hl=en
-- GitHub Dark Theme - https://chrome.google.com/webstore/detail/github-dark-theme/odkdlljoangmamjilkamahebpkgpeacp/related?hl=en
+- Octotree - <https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en>
+- Refined GitHub - <https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en>
+- Octolinker - <https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp/related?hl=en>
+- File Icon for GitHub - <https://chrome.google.com/webstore/detail/file-icon-for-github-and/ficfmibkjjnpogdcfhfokmihanoldbfe/related?hl=en>
+- GitHub Dark Theme - <https://chrome.google.com/webstore/detail/github-dark-theme/odkdlljoangmamjilkamahebpkgpeacp/related?hl=en>

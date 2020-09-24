@@ -35,8 +35,8 @@ Untuk meng-_install_ di Windows cukuplah mudah, seperti kamu melakukan instalasi
 4. Setelah _cmd_ terbuka kamu dapat mengetikan _command_ berikut untuk mengetahui versi berapa yang sudah terpasang di perangkat kamu.
 
 ```bash
-$ node --version
-v12.9.1
+node --version
+# -> v12.9.1
 ```
 
 Jika kamu mau install NodeJS di WSL, kamu bisa ikuti langkah-langkah [installasi di Ubuntu](#instalasi-di-ubuntu)
@@ -54,23 +54,23 @@ Untuk meng-_install_ di MacOS terdapat 2 cara, pertama mirip-mirip dengan Window
 2. Jika sudah ter-_install_ kamu dapat check dengan mengetikan _script_ ini.
 
 ```bash
-$ brew -v
-Homebrew 2.2.2
+brew -v
+# -> Homebrew 2.2.2
 ```
 
 3. Setelah selesai kamu dapat mengetikan _command_ di bawah di terminal kamu.
 
 ```bash
-$ brew install node
+brew install node
 ```
 
 4. Jika installasi sukses maka kamu dapat cek di terminal seperti di bawah ini.
 
-```
-$ node -v
-v12.9.1
-$ npm -v
-6.10.2
+```bash
+node -v
+# -> v12.9.1
+npm -v
+# -> 6.10.2
 ```
 
 Dan kamu sudah dapat bermain dengan NodeJS di Mac kamu.
@@ -82,7 +82,7 @@ Untuk pengguna Ubuntu atau WSL Ubuntu di Windows berikut adalah langkah-langkahn
 1. Pertama kamu membutuhkan _curl_, jika belum ada _curl_ kamu dapat mengetikan _command_ ini di terminal kamu.
 
 ```bash
-$ sudo apt-get install curl
+sudo apt-get install curl
 ```
 
 2. Lalu tambahkan source NodeJS dengan _command_ berikut.
@@ -90,26 +90,26 @@ $ sudo apt-get install curl
 ```bash
 # setup_12.x 12 adalah versi NodeJS. Kalo kamu mau versi 14
 # Kamu bisa ganti menjadi setup_14.x
-$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
 
 3. Jika sudah menambahkan source NodeJS lalu ketikkan _command_ berikut untuk meng-_install_ NodeJS
 
 ```bash
-$ sudo apt-get update
+sudo apt-get update
 ```
 
 ```bash
-$ sudo apt-get install nodejs
+sudo apt-get install nodejs
 ```
 
 4. Setelah meng-_install_ kamu dapat cek di terminal dengan menggunakan command berikut.
 
-```
-$ node -v
-v12.9.1
-$ npm -v
-6.10.2
+```bash
+node -v
+# -> v12.9.1
+npm -v
+# -> 6.10.2
 ```
 
 ## Summary
