@@ -17,7 +17,7 @@ _Package List and Version_
 
 Angka-angka tersebut dinamakkan [Semantic Versioning](https://semver.org) atau biasa di singkat _SemVer_.
 
-## Apa sih maksud angka-angkanya?
+## Apa sih maksud angka-angkanya
 
 Dalam _SemVer_ dibagi menjadi 3 versi angka. Misalkan kita memiliki dependency sebagai berikut `typescript@3.4.5`. Angka tersebut menunjukan jenis atau apa saja yang berubah atau di update di dependency tersebut dan menyebut angka tersebut dari kiri ke kanan sebagai `Major`, `Minor` dan `Patch`.
 
@@ -50,15 +50,15 @@ _publish ke npm dengan spesifik versi_
 
 Jadi ketika kita ingin mem-_publish package_ kita tidak susah lagi, semuanya sudah di automasi oleh [np](https://github.com/sindresorhus/np).
 
-## TLDR;
+## TLDR
 
 > Semver atau _semantic version_ sangatlah penting ketika kita membuat sebuah _package_ dan kita dapat melihat perubahan dari _package_ atau _library_ tersebut dari angkanya saja misal v3.2.1 dari angka paling kiri adalah **major**, **minor**, **patch**.
 
 > Untuk mempermudah kita dalam me-_maintenance_ versi dari _package_ atau _library_ dapat menggunakan _package_ [NP](https://github.com/sindresorhus/np) yang dapat melakukan _task_ mulai dari _bump version package_ kita, hingga _publish_ dan membuat _tags_ lalu push ke _github_.
 
-#### Credits
+### Credits
 
-- https://semver.org/
-- https://github.com/sindresorhus/np
-- https://github.com/sindresorhus
-- https://unsplash.com/@dietmarbecker
+- <https://semver.org/>
+- <https://github.com/sindresorhus/np>
+- <https://github.com/sindresorhus>
+- <https://unsplash.com/@dietmarbecker>
