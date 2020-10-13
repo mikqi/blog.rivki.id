@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <main
       class="mt-6 md:mt-12 px-6 sm:px-0 min-container container max-w-2xl mx-auto"
     >
@@ -70,10 +71,15 @@
 
 <script>
 import dayjs from 'dayjs'
+import Header from '@/components/Header'
 import { generateSEO } from '@/utils/seo'
 
 export default {
   name: 'ArticleDetail',
+  layout: 'empty',
+  components: {
+    Header,
+  },
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     const [prev, next] = await $content('articles')
