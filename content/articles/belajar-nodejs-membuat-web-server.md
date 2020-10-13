@@ -14,7 +14,7 @@ Jika kamu pernah membuat sebuah statich HTML Website atau sebelumnya pernah meng
 
 Contoh nih, jika kamu buat _about.html_ dan diletakan di folder yang benar (contoh: www/), maka kamu bisa mengakses halaman tersebut di url _http://localhost/about.html_. Tergantung dari konfigurasi web server, kamu dapat menghilangkan "_.html_".
 
-Node memberikan pendekatan yang berbeda dari web server tradisional. Di Node sendiri, aplikasi yang kamu buat/tulis adalah web server itu sendiri. Tapi membuat web server di Node itu sederhana dan gak terlalu ribet. Jika kamu belum meng-_install_ Node di perangkat kamu, [ikuti artikel ini](/cara-install-node-js).
+Node memberikan pendekatan yang berbeda dari web server tradisional. Di Node sendiri, aplikasi yang kamu buat/tulis adalah web server itu sendiri. Tapi membuat web server di Node itu sederhana dan gak terlalu ribet. Jika kamu belum meng-_install_ Node di perangkat kamu, [ikuti artikel ini](/articles/belajar-nodejs-cara-install).
 
 ## Hello World NodeJS
 

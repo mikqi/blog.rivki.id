@@ -29,7 +29,7 @@ Illustrasi di atas menggambarkan bagaimana komunikasi _client - server_ bekerja.
 6. Misal, _response_ dari server adalah menampilkan tulisan "Hello world", maka di _browser_ akan menampilkan "Hello world".
 7. Misal, kita mengetikan url "example.com/asdwa" dan _web server_ tidak menemukkan hasil yang sesuai _request_ dari client. Maka akan me-_response_ bahwa yang di _request_ dari _client_ itu tidak ada.
 
-Untuk lebih detail mari kita melanjutkan _helloworld.js_ kita dari artikel [sebelumnya](/belajar-node-js-membuat-web-server-sendiri-menggunakan-node-js)
+Untuk lebih detail mari kita melanjutkan _helloworld.js_ kita dari artikel [sebelumnya](/articles/belajar-nodejs-membuat-web-server)
 
 Berikut adalah kode dari artikel sebelumnya. Sekarang kita akan mempelajari bagaimana sih membuat routing atau cara kerja routing sebenarnya tanpa framework/library. Kita akan membuat routing ke halaman "/", "/about" dan "/404" jika request yang dilakukan oleh browser tidak ditemukan oleh server atau aplikasi yang kita buat.
 

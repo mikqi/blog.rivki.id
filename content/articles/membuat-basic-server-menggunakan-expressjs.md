@@ -9,13 +9,13 @@ tags:
   - Backend
 ---
 
-[Sebelumnya](/belajar-node-js-membuat-web-server-sendiri-menggunakan-node-js) kita sudah mempelajari bagaimana membuat Web Server sendiri dengan menggunakan NodeJS saja. Kali ini kita akan mencoba bagaimana membuat Web Server dengan menggunakan [ExpressJS](https://expressjs.com) salah satu _framework_ yang paling banyak digunakan di NodeJS.
+[Sebelumnya](/articles/belajar-nodejs-membuat-web-server) kita sudah mempelajari bagaimana membuat Web Server sendiri dengan menggunakan NodeJS saja. Kali ini kita akan mencoba bagaimana membuat Web Server dengan menggunakan [ExpressJS](https://expressjs.com) salah satu _framework_ yang paling banyak digunakan di NodeJS.
 
 Kenapa sih harus ExpressJS? Kalo menurut saya ExpressJS cepat, minimalis, simpel dan cukup mudah dipelajari. Terus, banyak _framework_ lain juga based on ExpressJS, bahasa gampangnya pondasinya itu ExpressJS.
 
 ## Membuat Projek
 
-Hal-hal yang dibutuhkan untuk mengikuti tutorial ini adalah `node` dan `npm`. Jika kamu masih belum meng-install-nya di lokal kamu. [Kamu bisa baca tutorial ini](/belajar-node-js-cara-install-node-js-di-windows-mac-os-linux-ubuntu).
+Hal-hal yang dibutuhkan untuk mengikuti tutorial ini adalah `node` dan `npm`. Jika kamu masih belum meng-install-nya di lokal kamu. [Kamu bisa baca tutorial ini](/articles/belajar-nodejs-cara-install).
 
 Kita akan mulai dengan membuat _folder_ untuk aplikasi kita, lalu mengakses _folder_-nya dengan menggunakan _terminal_.
 

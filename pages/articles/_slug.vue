@@ -38,31 +38,31 @@
         v-if="prev"
         class="flex flex-1 h-64 text-center text-xl relative"
         :style="`background: url(${prev.cover}) no-repeat center center; background-size: cover`"
-        :to="prev.path"
+        :to="{ name: 'articles-slug', params: { slug: prev.slug } }"
         tag="a"
       >
-        <div class="flex justify-center items-center w-full h-full flex-col">
+        <span class="flex justify-center items-center w-full h-full flex-col">
           <span class="badge z-10 mb-2">Read Prev</span>
           <span class="z-10 text-white">{{ prev.title }}</span>
           <div
             class="w-full h-full bg-gray-900 opacity-75 hover:bg-black absolute"
           />
-        </div>
+        </span>
       </nuxt-link>
       <nuxt-link
         v-if="next"
         class="flex flex-1 h-64 text-center text-xl relative"
         :style="`background: url(${next.cover}) no-repeat center center; background-size: cover`"
-        :to="next.path"
+        :to="{ name: 'articles-slug', params: { slug: next.slug } }"
         tag="a"
       >
-        <div class="flex justify-center items-center w-full h-full flex-col">
+        <span class="flex justify-center items-center w-full h-full flex-col">
           <span class="badge z-10 mb-2">Read Next</span>
           <span class="z-10 text-white">{{ next.title }}</span>
           <div
             class="w-full h-full bg-gray-900 opacity-75 hover:bg-black absolute"
           />
-        </div>
+        </span>
       </nuxt-link>
     </div>
   </div>
@@ -74,7 +74,6 @@ import { generateSEO } from '@/utils/seo'
 
 export default {
   name: 'ArticleDetail',
-  layout: 'empty',
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     const [prev, next] = await $content('articles')
